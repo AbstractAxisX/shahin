@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web page name</title>
+    <link rel="icon" href="./pictures/favicon.ico" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+
+<div class="bg-gray-200">
+    <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+    <!-- Basic navbar -->
+    <div class="px-8 pt-4     <نو بار|navbar>  " dir="ltr">
+        <nav class="w-full h-12 bg-gray-900 mx-auto rounded-full md:flex flex-row-reverse px-2 py-2 gap-2 hidden">
+            <a href="#" class="w-8"><img src="./pictures/favicon.ico" alt="" /></a>
+            <button
+                class="bg-gray-200 px-2 rounded-full hover:bg-blue-500 hover:text-white active:ring-gray-100 active:ring-2">
+                Home
+            </button>
+
+            <button
+                class="bg-gray-200 px-2 rounded-full hover:bg-blue-500 hover:text-white active:ring-gray-100 active:ring-2">
+                About
+            </button>
+
+            <button
+                class="bg-gray-200 px-2 rounded-full hover:bg-blue-500 hover:text-white active:ring-gray-100 active:ring-2">
+                Contact us
+            </button>
+            <!-- button group -->
+            <div class="relative inline-block text-left">
+                <div>
+                    <button type="button"
+                        class="inline-flex w-full justify-center gap-x-1.5 rounded-full bg-gray-200 px-2 py-1 text-gray-900 focus:bg-blue-500 focus:text-white focus:ring-gray-100 focus:ring-2 "
+                        id="menu-button" aria-expanded="true" aria-haspopup="true">
+                        Options
+                        <svg class="-mr-1 size-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor"
+                            aria-hidden="true" data-slot="icon">
+                            <path fill-rule="evenodd"
+                                d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white ring-1 shadow-lg ring-black/5 focus:outline-hidden hidden"
+                    role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1" id="dropList">
+                    <div class="py-1" role="none">
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
+                            id="menu-item-0">Account settings</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
+                            id="menu-item-1">Support</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
+                            id="menu-item-2">License</a>
+                    </div>
+                </div>
+            </div>
+
+           <!-- search box -->
+            <div class="flex-1"></div>
+
+            <a href="#" class="rounded-full bg-gray-200 px-2 flex items-center  hover:bg-blue-500 hover:text-white active:ring-gray-100 active:ring-2"><i class="bi bi-handbag  " ></i></a> 
+            <form role="search" class="flex">
+                <button
+                    class="bg-gray-200 mx-2 px-2 rounded-full hover:bg-blue-500 hover:text-white active:ring-gray-100 active:ring-2">
+                    <i class="bi bi-search"></i>
+                </button>
+                <input type="search" class="bg-gray-200 rounded-full me-auto text-black px-2" aria-label="Search"
+                    placeholder="search" />
+            </form>
+        </nav>
+    </div>
+
+    <!-- Mobile navbar -->
+    <div class="  mobile-navbar |  نوبار موبایل  ">
+
+
+        <nav
+            class="fixed top-0 left-0 right-0 h-16 glass-effect flex items-center justify-between px-4 border-b border-gray-300/30 z-50 md:hidden">
+            <!-- Logo -->
+            <a href="#"> <div class="text-gray-900 font-bold text-xl">LOGO</div></a>
+            
+            <!-- Search Box -->
+            <input type="text" placeholder="Search"
+            class="bg-gray-100/50 rounded-full px-4 py-2 w-1/3 text-gray-900 focus:outline-none">
+            
+            <a href="#" class="rounded-full  py-1 px-2 flex items-center  hover:text-white active:ring-gray-100 active:ring-2 -m
+            -10 sm:-mx-32  "><i class="bi bi-handbag  " ></i></a>
+            <!-- Menu Button -->
+            <button onclick="toggleMenu()"
+                class="text-gray-900 p-2 rounded-full hover:bg-gray-100/30 transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </nav>
+
+        <!-- Overlay Menu -->
+        <div class="nav-overlay fixed top-0 left-0 right-0  glass-effect z-50 shadow-lg rounded-b-4xl ">
+            <div class="p-4 flex flex-col space-y-4">
+                <button class="text-gray-900 text-left py-2 px-4 rounded-lg hover:bg-gray-100/30">صفحه اصلی</button>
+                <button class="text-gray-900 text-left py-2 px-4 rounded-lg hover:bg-gray-100/30">دکمه اول</button>
+                <button class="text-gray-900 text-left py-2 px-4 rounded-lg hover:bg-gray-100/30">دکمه دوم</button>
+                <button class="text-gray-900 text-left py-2 px-4 rounded-lg hover:bg-gray-100/30">دکمه سوم</button>
+                <button class="text-gray-900 text-left py-2 px-4 rounded-lg hover:bg-gray-100/30">دکمه چهارم</button>
+                <button class="text-gray-900 text-left py-2 px-4 rounded-lg hover:bg-gray-100/30">دکمه پنجم</button>
+
+
+
+
+                <button onclick="toggleMenu()" class="absolute top-2 right-2 p-2 text-gray-900">
+                    ✕
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slider -->
+    <div class="  کروسل اسلایدر  md:mt-0 mt-16" dir="ltr">
+        <!-- Background effects -->
+        <div class="fixed inset-0 -z-10">
+            <div class="absolute inset-0 bg-gradient-to-br from-blue-900/20  to-gray-900/5 "></div>
+            <div
+                class="absolute top-1/4 left-1/4 w-48 h-48 sm:w-96 sm:h-96 bg-violet-500/10 rounded-full filter blur-3xl">
+            </div>
+            <div
+                class="absolute bottom-1/4 right-1/4 w-48 h-48 sm:w-96 sm:h-96 bg-blue-500/10 rounded-full filter blur-3xl">
+            </div>
+        </div>
+
+        <!-- Main container -->
+        <div class="w-full my-max-w  h-full mx-auto ">
+            <!-- Carousel container -->
+            <div class="carousel-container relative overflow-hidden my-round lg:h-scree">
+                <!-- Progress bar -->
+                <div class="absolute top-0 left-0 right-0 h-1 bg-white/10 rounded-full overflow-hidden z-20 mx-10 mt-4">
+                    <div
+                        class="progress-bar absolute top-0 left-0 h-full w-1/3 bg-gradient-to-r from-blue-400 to-gray-500 rounded-full">
+                    </div>
+                </div>
+
+                <!-- Navigation buttons -->
+                <button
+                    class="nav-button absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center z-20 text-white touch-manipulation"
+                    onclick="prevSlide()" title="Previous slide">
+                    <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
+                        </path>
+                    </svg>
+                </button>
+
+                <button
+                    class="nav-button absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center z-20 text-white touch-manipulation"
+                    onclick="nextSlide()" title="Next slide">
+                    <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+
+                <!-- Carousel track -->
+                <div class="carousel-track relative h-[400px] sm:h-[500px] md:h-[600px]  lg:h-screen overflow-hidden">
+                    <!-- Carousel items -->
+                    <div class="carousel-item active absolute top-0 left-0 w-full h-full">
+                        <div class="w-full h-full p-4 sm:p-8">
+                            <div class="w-full h-full rounded-xl sm:rounded-2xl overflow-hidden relative group">
+                                <img src="./pictures/Nature HD Wallpapers 188.jpg" alt="Geometric art installation"
+                                    class="  absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-br from-violet-500/40 to-purple-500/40 mix-blend-overlay">
+                                </div>
+                                <div
+                                    class="absolute inset-x-0 bottom-0 sm:p-8 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col items-end p-8 rounded-2xl">
+                                    <h3 class="text-white text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-3"> لورم
+                                        ایپسوم </h3>
+                                    <p class="text-gray-200 text-sm sm:text-base md:text-lg max-w-2xl"> لورم ایپسوم متن
+                                        ساختگی لورم ایپسوم متن ساختگی لورم ایپسوم متن ساختگی </p>
+                                    <p class="text-gray-200 text-sm sm:text-base md:text-lg max-w-2xl">Where geometry
+                                        meets art in a stunning display of light and form.</p>
+                                    <p class="text-gray-200 text-sm sm:text-base md:text-lg max-w-2xl">Where geometry
+                                        meets art in a stunning display of light and form.</p>
+                                    <!-- <button class=" z-40 px-4 py-2 bg-transparent border-2 border-gray-200 rounded-xl text-gray-200 duration-100 hover:bg-gray-100 hover:text-gray-900 mt-3 ">  add to buy </button> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item next absolute top-0 left-0 w-full h-full">
+                        <div class="w-full h-full p-4 sm:p-8">
+                            <div class="w-full h-full rounded-xl sm:rounded-2xl overflow-hidden relative group">
+                                <img src="./pictures/Nature HD Wallpapers 131.jpg" alt="Futuristic tech setup"
+                                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-br from-fuchsia-500/40 to-pink-500/40 mix-blend-overlay">
+                                </div>
+                                <div
+                                    class="absolute inset-x-0 bottom-0 sm:p-8 bg-gradient-to-t from-black/80 via-black/40 to-transparent text-end  flex flex-col items-end p-8 rounded-2xl">
+                                    <h3 class="text-white text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-3 ">Tech
+                                        Haven</h3>
+                                    <p class="text-gray-200 text-sm sm:text-base md:text-lg max-w-2xl">Immerse yourself
+                                        in the cutting edge of technology and innovation.</p>
+                                    <p class="text-gray-200 text-sm sm:text-base md:text-lg max-w-2xl">Where geometry
+                                        meets art in a stunning display of light and form.</p>
+                                    <p class="text-gray-200 text-sm sm:text-base md:text-lg max-w-2xl">Where geometry
+                                        meets art in a stunning display of light and form.</p>
+                                    <!-- <button class=" z-40 px-4 py-2 bg-transparent border-2 border-gray-200 rounded-xl text-gray-200 duration-100 hover:bg-gray-100 hover:text-gray-900 mt-3 ">add to buy</button> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item hidden absolute top-0 left-0 w-full h-full">
+                        <div class="w-full h-full p-4 sm:p-8">
+                            <div class="w-full h-full rounded-xl sm:rounded-2xl overflow-hidden relative group">
+                                <img src="./pictures/Nature HD Wallpapers 135.jpg" alt="Abstract digital art"
+                                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-br from-pink-500/40 to-rose-500/40 mix-blend-overlay">
+                                </div>
+                                <div
+                                    class="absolute inset-x-0 bottom-0 sm:p-8 bg-gradient-to-t from-black/80 via-black/40 to-transparent text-end  flex flex-col items-end p-8 rounded-2xl">
+                                    <h3 class="text-white text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-3">Neural
+                                        Dreams</h3>
+                                    <p class="text-gray-200 text-sm sm:text-base md:text-lg max-w-2xl">AI-generated
+                                        masterpieces that blur the line between human and machine creativity.</p>
+                                    <p class="text-gray-200 text-sm sm:text-base md:text-lg max-w-2xl">Where geometry
+                                        meets art in a stunning display of light and form.</p>
+                                    <p class="text-gray-200 text-sm sm:text-base md:text-lg max-w-2xl">لورم ایپسوم متن
+                                        ساختگی لورم ایپسوم متن ساختگی.</p>
+                                    <!-- <button class=" z-40 px-4 py-2 bg-transparent border-2 border-gray-200 rounded-xl text-gray-200 duration-100 hover:bg-gray-100 hover:text-gray-900 mt-3">add to buy</button> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Indicators -->
+                <div class="absolute bottom-2 sm:bottom-4 left-1/2 -translate-x-1/2 flex gap-1 sm:gap-2 z-20">
+                    <button
+                        class="w-8 sm:w-12 h-1 sm:h-1.5 rounded-full bg-white/40 hover:bg-white/60 transition-colors"
+                        title="Go to slide 1"></button>
+                    <button
+                        class="w-8 sm:w-12 h-1 sm:h-1.5 rounded-full bg-white/20 hover:bg-white/60 transition-colors"
+                        title="Go to slide 2"></button>
+                    <button
+                        class="w-8 sm:w-12 h-1 sm:h-1.5 rounded-full bg-white/20 hover:bg-white/60 transition-colors"
+                        title="Go to slide 3"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 2400 800" opacity="1"><defs><linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="oooscillate-grad"><stop stop-color="hsl(205, 69%, 60%)" stop-opacity="1" offset="0%"></stop><stop stop-color="hsl(205, 69%, 80%)" stop-opacity="1" offset="100%"></stop></linearGradient></defs><g stroke-width="1.5" stroke="url(#oooscillate-grad)" fill="none" stroke-linecap="round"><path d="M 0 440 Q 600 265 1200 400 Q 1800 535 2400 440" opacity="1.00"></path><path d="M 0 418 Q 600 265 1200 400 Q 1800 535 2400 418" opacity="0.95"></path><path d="M 0 396 Q 600 265 1200 400 Q 1800 535 2400 396" opacity="0.90"></path><path d="M 0 374 Q 600 265 1200 400 Q 1800 535 2400 374" opacity="0.85"></path><path d="M 0 352 Q 600 265 1200 400 Q 1800 535 2400 352" opacity="0.80"></path><path d="M 0 330 Q 600 265 1200 400 Q 1800 535 2400 330" opacity="0.75"></path><path d="M 0 308 Q 600 265 1200 400 Q 1800 535 2400 308" opacity="0.70"></path><path d="M 0 286 Q 600 265 1200 400 Q 1800 535 2400 286" opacity="0.65"></path><path d="M 0 264 Q 600 265 1200 400 Q 1800 535 2400 264" opacity="0.60"></path><path d="M 0 242 Q 600 265 1200 400 Q 1800 535 2400 242" opacity="0.55"></path><path d="M 0 220 Q 600 265 1200 400 Q 1800 535 2400 220" opacity="0.50"></path><path d="M 0 198 Q 600 265 1200 400 Q 1800 535 2400 198" opacity="0.45"></path><path d="M 0 176 Q 600 265 1200 400 Q 1800 535 2400 176" opacity="0.40"></path><path d="M 0 154 Q 600 265 1200 400 Q 1800 535 2400 154" opacity="0.35"></path><path d="M 0 132 Q 600 265 1200 400 Q 1800 535 2400 132" opacity="0.30"></path><path d="M 0 110 Q 600 265 1200 400 Q 1800 535 2400 110" opacity="0.25"></path><path d="M 0 88 Q 600 265 1200 400 Q 1800 535 2400 88" opacity="0.20"></path><path d="M 0 66 Q 600 265 1200 400 Q 1800 535 2400 66" opacity="0.15"></path><path d="M 0 44 Q 600 265 1200 400 Q 1800 535 2400 44" opacity="0.10"></path></g></svg> -->
+
+    <!-- divider -->
+    <div class="flex flex-row w-full  mt-4 items-center gap-4 px-6">
+        <div class="h-1 w-full bg-blue-500 rounded-full "></div>
+        <h2 class="text-3xl font-semibold mx-auto text-center text-gray-900"> بخش های وبسایت </h2>
+        <div class="h-1 w-full bg-blue-500 rounded-full "></div>
+    </div>
+
+    <!-- sections -->
+    <div class="  بخش ها|sections ">
+
+
+        <!-- section 1 -->
+        <div
+         data-aos="zoom-in" data-aos-duration="400" data-aos-easing="ease-back" class="  items-center mt-10 flex md:flex-row flex-col h-full mx-4 border-solid border rounded-2xl border-black/10 bg-gray-300/50 hover:bg-gray-300 duration-100">
+            <div class="flex-1 p-4">
+                <img src="./pictures/Nature HD Wallpapers 217.jpg" alt=""
+                    class="rounded-tr-2xl rounded-bl-2xl outline-1 outline-offset-2 outline-black/30">
+            </div>
+
+            <div class="flex-1 p-4 text-3xl">
+                <h3 class="text-gray-950/90 mb-2"> توضیحات </h3>
+                <p class="lg:text-xl text-sm text-gray-800"> این قسمت مربوط به توضیحات میشود <br>این قسمت مربوط به
+                    توضیحات میشود <br>این قسمت مربوط به توضیحات میشود <br>این قسمت مربوط به توضیحات میشود <br> این قسمت
+                    مربوط به توضیحات میشود <br> این قسمت مربوط به توضیحات میشود <br>
+                    این قسمت مربوط به توضیحات میشود این قسمت مربوط به توضیحات میشود این قسمت مربوط به توضیحات میشود این
+                    قسمت مربوط به </p>
+            </div>
+        </div>
+        <!-- section 2 -->
+        <div
+        data-aos="zoom-in" data-aos-duration="400" data-aos-easing="ease-back" class= "   items-center mt-10 flex md:flex-row-reverse flex-col h-full mx-4 border-solid border rounded-2xl border-black/10 bg-gray-300/50 hover:bg-gray-300 duration-100">
+            <div class="flex-1 p-4">
+                <img src="./pictures/Nature HD Wallpapers 243.jpg" alt=""
+                    class="rounded-tl-2xl rounded-br-2xl outline-1 outline-offset-2 outline-black/30">
+            </div>
+
+            <div class="flex-1 p-4 text-3xl">
+                <h3 class="text-gray-950/90 mb-2"> توضیحات </h3>
+                <p class="lg:text-xl text-sm text-gray-800"> این قسمت مربوط به توضیحات میشود <br>این قسمت مربوط به
+                    توضیحات میشود <br>این قسمت مربوط به توضیحات میشود <br>این قسمت مربوط به توضیحات میشود <br> این قسمت
+                    مربوط به توضیحات میشود <br> این قسمت مربوط به توضیحات میشود <br>
+                    این قسمت مربوط به توضیحات میشود این قسمت مربوط به توضیحات میشود این قسمت مربوط به توضیحات میشود این
+                    قسمت مربوط به </p>
+            </div>
+        </div>
+        <!-- section 3 -->
+        <div
+        data-aos="zoom-in" data-aos-duration="400" data-aos-easing="ease-back" class=" items-center mt-10 flex md:flex-row flex-col h-full mx-4 border-solid border rounded-2xl border-black/10 bg-gray-300/50 hover:bg-gray-300 duration-100">
+            <div class="flex-1 p-4">
+                <img src="./pictures/Nature HD Wallpapers 188.jpg" alt=""
+                    class="rounded-tr-2xl rounded-bl-2xl outline-1 outline-offset-2 outline-black/30">
+            </div>
+
+            <div class="flex-1 p-4 text-3xl">
+                <h3 class="text-gray-950/90 mb-2"> توضیحات </h3>
+                <p class="lg:text-xl text-sm text-gray-800"> این قسمت مربوط به توضیحات میشود <br>این قسمت مربوط به
+                    توضیحات میشود <br>این قسمت مربوط به توضیحات میشود <br>این قسمت مربوط به توضیحات میشود <br> این قسمت
+                    مربوط به توضیحات میشود <br> این قسمت مربوط به توضیحات میشود <br>
+                    این قسمت مربوط به توضیحات میشود این قسمت مربوط به توضیحات میشود این قسمت مربوط به توضیحات میشود این
+                    قسمت مربوط به </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex flex-row w-full  mt-8 items-center gap-4 px-6">
+        <div class="h-1 w-full bg-blue-500 rounded-full "></div>
+        <h2 class="text-3xl font-semibold mx-auto text-center text-gray-900"> بخش های وبسایت </h2>
+        <div class="h-1 w-full bg-blue-500 rounded-full "></div>
+    </div>
+
+    <!--inline images slider -->
+    <div data-aos="fade-in" data-aos-duration="400" data-aos-easing="ease-back" class="relative h-full  mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="relative overflow-hidden">
+            <!-- Slides container -->
+            <div id="slider" class="slider-container flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide">
+                <!-- Slides -->
+                <div class="flex-none w-[calc(100%/3)] md:w-[calc(100%/6)] lg:w-[calc(100%/8)] aspect-square">
+                    <img src="./pictures/Nature HD Wallpapers 217.jpg"
+                        class="w-full h-full object-cover rounded-lg  hover:border-2 border-white/1 duration-100">
+                </div>
+                <div class="flex-none w-[calc(100%/3)] md:w-[calc(100%/6)] lg:w-[calc(100%/8)] aspect-square">
+                    <img src="./pictures/Nature HD Wallpapers 217.jpg"
+                        class="w-full h-full object-cover rounded-lg hover:border-2 border-white/1 duration-100">
+                </div>
+                <!-- تکرار برای عکس‌های دیگر -->
+                <div class="flex-none w-[calc(100%/3)] md:w-[calc(100%/6)] lg:w-[calc(100%/8)] aspect-square">
+                    <img src="./pictures/Nature HD Wallpapers 217.jpg"
+                        class="w-full h-full object-cover rounded-lg hover:border-2 border-white/1 duration-100">
+                </div>
+                <div class="flex-none w-[calc(100%/3)] md:w-[calc(100%/6)] lg:w-[calc(100%/8)] aspect-square">
+                    <img src="./pictures/Nature HD Wallpapers 217.jpg"
+                        class="w-full h-full object-cover rounded-lg hover:border-2 border-white/1 duration-100">
+                </div>
+                <div class="flex-none w-[calc(100%/3)] md:w-[calc(100%/6)] lg:w-[calc(100%/8)] aspect-square">
+                    <img src="./pictures/Nature HD Wallpapers 217.jpg"
+                        class="w-full h-full object-cover rounded-lg hover:border-2 border-white/1 duration-100">
+                </div>
+                <div class="flex-none w-[calc(100%/3)] md:w-[calc(100%/6)] lg:w-[calc(100%/8)] aspect-square">
+                    <img src="./pictures/Nature HD Wallpapers 217.jpg"
+                        class="w-full h-full object-cover rounded-lg hover:border-2 border-white/1 duration-100">
+                </div>
+                <div class="flex-none w-[calc(100%/3)] md:w-[calc(100%/6)] lg:w-[calc(100%/8)] aspect-square">
+                    <img src="./pictures/Nature HD Wallpapers 217.jpg"
+                        class="w-full h-full object-cover rounded-lg hover:border-2 border-white/1 duration-100">
+                </div>
+                <div class="flex-none w-[calc(100%/3)] md:w-[calc(100%/6)] lg:w-[calc(100%/8)] aspect-square">
+                    <img src="./pictures/Nature HD Wallpapers 217.jpg"
+                        class="w-full h-full object-cover rounded-lg hover:border-2 border-white/1 duration-100">
+                </div>
+            </div>
+
+            <!-- Navigation buttons -->
+            <button id="prev"
+                class="glass-button absolute left-0 top-1/2 -translate-y-1/2 px-4 py-3 rounded-full text-white hover:bg-white/30">
+                ←
+            </button>
+            <button id="next"
+                class="glass-button absolute right-0 top-1/2 -translate-y-1/2 px-4 py-3 rounded-full text-white hover:bg-white/30">
+                →
+            </button>
+        </div>
+    </div>
+
+    <div data-aos="fade-in" data-aos-duration="800" data-aos-easing="ease-back" class="  text|متن اضافی  text-center w-full px-8 ">
+        <h1 class="text-3xl text-gray-900"> لورم ایپسوم </h1>
+        <p class="text-lg text-gray-800 text-justify mt-4">
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون
+            بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع
+            با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه
+            و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و
+            فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها،
+            و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل
+            دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+        </p>
+    </div>
+
+    <!-- footer -->
+    <img src="./pictures/layered-waves-haikei (2).svg " alt="" class="sm:-mt-68 lg:-mt-96 w-full ">
+    <footer class="text-center" >
+        <div class="bg-footer py-4 text-gray-400">
+          <div class="container px-4 mx-auto">
+            <div class="-mx-4 flex flex-wrap justify-between">
+              <div class="px-4 my-4 w-full xl:w-1/5">
+
+                <p class="text-justify">
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت                </p>
+              </div>
+    
+              <div class="px-4 my-4 w-full sm:w-auto">
+                <div>
+                  <h2 class="inline-block text-2xl pb-4 mb-4 border-b-4 border-blue-600">  جایگاه متن دلخواه  </h2>
+                </div>
+                <ul class="leading-8 sm:text-start">
+                  <li><a href="#" class="hover:text-blue-400">  نمونه لینک  </a></li>
+                  <li><a href="#" class="hover:text-blue-400"> نمونه لینک   </a></li>
+                  <li><a href="#" class="hover:text-blue-400">  نمونه لینک  </a></li>
+                  <li><a href="#" class="hover:text-blue-400">  نمونه لینک  </a></li>
+                </ul>
+              </div>
+              <div class="px-4 my-4 w-full sm:w-auto">
+                <div>
+                  <h2 class="inline-block text-2xl pb-4 mb-4 border-b-4 border-blue-600 ">  صفحات وبسایت  </h2>
+                </div>
+                <ul class="leading-8 sm:text-start" >
+                  <li><a href="#" class="hover:text-blue-400"> صفحه ها  </a></li>
+                  <li><a href="#" class="hover:text-blue-400"> صفحه ها   </a></li>
+                  <li><a href="#" class="hover:text-blue-400"> صفحه ها   </a></li>
+                  <li><a href="#" class="hover:text-blue-400"> صفحه ها   </a></li>
+                </ul>
+              </div>
+              <div class="px-4 my-4 w-full sm:w-auto xl:w-1/5">
+                <div class="text-center ">
+                  <h2 class="inline-block text-2xl pb-4 mb-4 border-b-4 border-blue-600 ">  راه های ارتباط با ما  </h2>
+                </div>
+                <a href="#" class=" inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full hover:text-blue-400 hover:border-blue-400">
+                  <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                    <path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path>
+                  </svg>
+                </a>
+                <a href="#" class="inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full  hover:text-blue-400 hover:border-blue-400">
+                  <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+                  </svg>
+                </a>
+                <a href="#" class="inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full  hover:text-blue-400 hover:border-blue-400">
+                  <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                    <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+                  </svg>
+                </a>
+                <a href="#" class="inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full  hover:text-blue-400 hover:border-blue-400">
+                  <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                    <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path>
+                  </svg>
+                </a>
+                <a href="#" class="inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full hover:text-blue-400 hover:border-blue-400">
+                  <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+    <script src="./index.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    </body>
+
+</html>

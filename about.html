@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+    <head>
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>درباره ما - نام وبسایت شما</title>
+        <link rel="icon" href="./pictures/favicon.ico" />
+        <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+        <link rel="stylesheet" href="./about.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        />
+    </head>
+
+    <body class="bg-gray-100">
+        <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+        <div class="bg-gray-300">
+            <!-- Basic navbar -->
+            <div class="px-8 pt-4 <نو بار|navbar>" dir="ltr">
+                <nav
+                    class="w-full h-12 bg-gray-900 mx-auto rounded-full md:flex flex-row-reverse px-2 py-2 gap-2 hidden"
+                >
+                    <a href="#" class="w-8"
+                        ><img src="./pictures/favicon.ico" alt=""
+                    /></a>
+                    <button
+                        class="bg-gray-200 px-2 rounded-full hover:bg-blue-500 hover:text-white active:ring-gray-100 active:ring-2"
+                    >
+                        Home
+                    </button>
+
+                    <button
+                        class="bg-gray-200 px-2 rounded-full hover:bg-blue-500 hover:text-white active:ring-gray-100 active:ring-2"
+                    >
+                        About
+                    </button>
+
+                    <button
+                        class="bg-gray-200 px-2 rounded-full hover:bg-blue-500 hover:text-white active:ring-gray-100 active:ring-2"
+                    >
+                        Contact us
+                    </button>
+                    <!-- button group -->
+                    <div class="relative inline-block text-left">
+                        <div>
+                            <button
+                                type="button"
+                                class="inline-flex w-full justify-center gap-x-1.5 rounded-full bg-gray-200 px-2 py-1 text-gray-900 focus:bg-blue-500 focus:text-white focus:ring-gray-100 focus:ring-2"
+                                id="menu-button"
+                                aria-expanded="true"
+                                aria-haspopup="true"
+                            >
+                                Options
+                                <svg
+                                    class="-mr-1 size-5 text-gray-400"
+                                    viewBox="0 0 20 20"
+                                    fill="currentColor"
+                                    aria-hidden="true"
+                                    data-slot="icon"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                                        clip-rule="evenodd"
+                                    />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div
+                            class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white ring-1 shadow-lg ring-black/5 focus:outline-hidden hidden"
+                            role="menu"
+                            aria-orientation="vertical"
+                            aria-labelledby="menu-button"
+                            tabindex="-1"
+                            id="dropList"
+                        >
+                            <div class="py-1" role="none">
+                                <a
+                                    href="#"
+                                    class="block px-4 py-2 text-sm text-gray-700"
+                                    role="menuitem"
+                                    tabindex="-1"
+                                    id="menu-item-0"
+                                    >Account settings</a
+                                >
+                                <a
+                                    href="#"
+                                    class="block px-4 py-2 text-sm text-gray-700"
+                                    role="menuitem"
+                                    tabindex="-1"
+                                    id="menu-item-1"
+                                    >Support</a
+                                >
+                                <a
+                                    href="#"
+                                    class="block px-4 py-2 text-sm text-gray-700"
+                                    role="menuitem"
+                                    tabindex="-1"
+                                    id="menu-item-2"
+                                    >License</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- search box -->
+                    <div class="flex-1"></div>
+
+                    <a
+                        href="#"
+                        class="rounded-full bg-gray-200 px-2 flex items-center hover:bg-blue-500 hover:text-white active:ring-gray-100 active:ring-2"
+                        ><i class="bi bi-handbag"></i
+                    ></a>
+                    <form role="search" class="flex">
+                        <button
+                            class="bg-gray-200 mx-2 px-2 rounded-full hover:bg-blue-500 hover:text-white active:ring-gray-100 active:ring-2"
+                        >
+                            <i class="bi bi-search"></i>
+                        </button>
+                        <input
+                            type="search"
+                            class="bg-gray-200 rounded-full me-auto text-black px-2"
+                            aria-label="Search"
+                            placeholder="search"
+                        />
+                    </form>
+                </nav>
+            </div>
+
+            <!-- Mobile navbar -->
+            <div class="mobile-navbar | نوبار موبایل">
+                <nav
+                    class="fixed top-0 left-0 right-0 h-16 glass-effect flex items-center justify-between px-4 border-b border-gray-300/30 z-50 md:hidden"
+                >
+                    <!-- Logo -->
+                    <a href="#">
+                        <div class="text-gray-900 font-bold text-xl">LOGO</div>
+                    </a>
+
+                    <!-- Search Box -->
+                    <input
+                        type="text"
+                        placeholder="Search"
+                        class="bg-gray-100/50 rounded-full px-4 py-2 w-1/3 text-gray-900 focus:outline-none"
+                    />
+
+                    <a
+                        href="#"
+                        class="rounded-full py-1 px-2 flex items-center hover:text-white active:ring-gray-100 active:ring-2 -m -10 sm:-mx-32"
+                        ><i class="bi bi-handbag"></i
+                    ></a>
+                    <!-- Menu Button -->
+                    <button
+                        onclick="toggleMenu()"
+                        class="text-gray-900 p-2 rounded-full hover:bg-gray-100/30 transition-colors"
+                    >
+                        <svg
+                            class="w-6 h-6"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"
+                            />
+                        </svg>
+                    </button>
+                </nav>
+
+                <!-- Overlay Menu -->
+                <div
+                    class="nav-overlay fixed top-0 left-0 right-0 glass-effect z-50 shadow-lg rounded-b-4xl"
+                >
+                    <div class="p-4 flex flex-col space-y-4">
+                        <button
+                            class="text-gray-900 text-left py-2 px-4 rounded-lg hover:bg-gray-100/30"
+                        >
+                            صفحه اصلی
+                        </button>
+                        <button
+                            class="text-gray-900 text-left py-2 px-4 rounded-lg hover:bg-gray-100/30"
+                        >
+                            دکمه اول
+                        </button>
+                        <button
+                            class="text-gray-900 text-left py-2 px-4 rounded-lg hover:bg-gray-100/30"
+                        >
+                            دکمه دوم
+                        </button>
+                        <button
+                            class="text-gray-900 text-left py-2 px-4 rounded-lg hover:bg-gray-100/30"
+                        >
+                            دکمه سوم
+                        </button>
+                        <button
+                            class="text-gray-900 text-left py-2 px-4 rounded-lg hover:bg-gray-100/30"
+                        >
+                            دکمه چهارم
+                        </button>
+                        <button
+                            class="text-gray-900 text-left py-2 px-4 rounded-lg hover:bg-gray-100/30"
+                        >
+                            دکمه پنجم
+                        </button>
+
+                        <button
+                            onclick="toggleMenu()"
+                            class="absolute top-2 right-2 p-2 text-gray-900"
+                        >
+                            ✕
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Hero Section -->
+        <section
+            class="hero-section py-20 bg-gray-300 text-center"
+            data-aos="fade-in"
+        >
+            <div class="container mx-auto px-4">
+                <h1 class="text-4xl font-bold text-gray-900 mb-4">
+                    اتصالات فلزی با کیفیت برای صنایع پیشرو
+                </h1>
+                <p class="text-lg text-gray-800 max-w-2xl mx-auto">
+                    ما در [نام شرکت] متعهد به ارائه بهترین اتصالات فلزی با
+                    بالاترین استانداردهای کیفیت هستیم. تخصص و تجربه ما تضمین
+                    می‌کند که نیازهای صنایع مختلف به بهترین شکل تامین شوند.
+                </p>
+            </div>
+        </section>
+        <div style="height: 150px; overflow: hidden">
+            <svg
+                viewBox="0 0 500 150"
+                preserveAspectRatio="none"
+                style="height: 100%; width: 100%"
+            >
+                <path 
+                    d="M-2.82,-3.44 C228.83,100.17 189.90,-17.25 501.41,28.13 L500.00,0.00 L-3.94,-5.41 Z"
+                    style="stroke: none; fill: oklch(0.872 0.01 258.338)"
+                ></path>
+            </svg>
+        </div>
+
+        <!--Story Section -->
+        <section class="our-story-section py-20 -mt-32" data-aos="fade-up">
+            <div class="container mx-auto px-4">
+                <h2
+                    class="text-3xl font-semibold text-gray-900 mb-8 text-center"
+                >
+                    داستان ما
+                </h2>
+                <div class="flex md:flex-row gap-4 flex-col items-center">
+                    <div class=" mb-8 flex-1 ">
+                        <img
+                            src="./pictures/notification-4.png"
+                            alt="تاریخچه شرکت"
+                            class="rounded-xl "
+                        />
+                    </div>
+                    <div class=" flex-1">
+                        <p class="text-gray-800 mb-4 ">
+                            [نام شرکت] در سال [سال تاسیس] با هدف ارائه اتصالات
+                            فلزی با کیفیت و قابل اعتماد به صنایع مختلف تاسیس شد.
+                            از همان ابتدا، تعهد به کیفیت و رضایت مشتریان، سرلوحه
+                            کار ما بوده است.
+                        </p>
+                        <p class="text-gray-800 mb-4 text-justify">
+                            در طول سال‌ها، با تلاش و نوآوری مستمر، توانسته‌ایم
+                            به یکی از پیشروان صنعت اتصالات فلزی در منطقه تبدیل
+                            شویم. ما به دستاوردهای خود افتخار می‌کنیم و همواره
+                            به دنبال بهبود و توسعه هستیم.
+                        </p>
+                        <p class="text-gray-800 text-justify">
+                            ارزش‌های اصلی ما، کیفیت، نوآوری، مشتری‌مداری و تعهد
+                            به پایداری هستند. این ارزش‌ها در تمام جنبه‌های
+                            فعالیت ما تجلی یافته و راهنمای ما در تصمیم‌گیری‌ها و
+                            اقدامات هستند.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission and Vision Section -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="-mb-1">
+            <path fill="oklch(0.872 0.01 258.338)" fill-opacity="1" d="M0,224L80,208C160,192,320,160,480,149.3C640,139,800,149,960,165.3C1120,181,1280,203,1360,213.3L1440,224L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+          </svg>
+
+        <section
+            class="mission-vision-section py-20 bg-gray-300"
+            
+        >
+            <div class="container mx-auto px-4">
+                <h2
+                    class="text-3xl font-semibold text-gray-900 mb-8 text-center"
+                >
+                    ماموریت و چشم‌انداز ما
+                </h2>
+                <div class="md:flex gap-4">
+                    <div class="md:w-1/2 md:pr-8 mb-8 md:mb-0 text-center">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4" data-aos="fade-in">
+                            ماموریت
+                        </h3>
+                        <p data-aos="fade-in" class="text-gray-900 text-justify border-1  border-gray-400 p-4 rounded-xl h-60">
+                            ماموریت ما ارائه اتصالات فلزی با کیفیت بی‌نظیر و
+                            خدمات متمایز به مشتریان است. ما تلاش می‌کنیم تا با
+                            تکیه بر تخصص و نوآوری، نیازهای صنایع مختلف را به
+                            بهترین شکل پاسخ دهیم و به موفقیت مشتریان خود کمک
+                            کنیم.
+                        </p>
+                    </div>
+                    <div class="md:w-1/2 text-center">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4 " data-aos="fade-in">
+                            چشم‌انداز
+                        </h3>
+                        <p data-aos="fade-in" class="text-gray-900 text-justify border-1  border-gray-400 p-4 rounded-xl h-60">
+                            چشم‌انداز ما تبدیل شدن به رهبر بازار اتصالات فلزی در
+                            منطقه و شناخته شدن به عنوان نماد کیفیت، نوآوری و
+                            مشتری‌مداری است. ما می‌خواهیم با توسعه محصولات جدید
+                            و پیشرفته، حضور خود را در بازارهای جهانی گسترش دهیم
+                            و ارزش پایدار برای مشتریان و ذینفعان خود ایجاد کنیم.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="-mt-1">
+            <path fill="oklch(0.872 0.01 258.338)" fill-opacity="1" d="M0,224L80,208C160,192,320,160,480,149.3C640,139,800,149,960,165.3C1120,181,1280,203,1360,213.3L1440,224L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+          </svg>
+
+        <!-- Our Expertise Section -->
+
+
+        <section
+            class="our-expertise-section py-20 "
+        >
+            <div class="container mx-auto px-4">
+                <h2
+                    class="text-3xl font-semibold text-gray-900 mb-8 text-center"
+                >
+                    تخصص ما
+                </h2>
+                <p
+                    class="text-lg text-gray-800 text-center max-w-2xl mx-auto mb-12"
+                >
+                    ما در [نام شرکت] با سال‌ها تجربه در صنعت اتصالات فلزی، تخصص
+                    عمیقی در زمینه‌های مختلف این صنعت کسب کرده‌ایم.
+                </p>
+                <div  class="md:flex md:flex-wrap justify-center gap-8">
+                    <div
+                        class="w-full md:w-1/3 lg:w-1/4 mb-8 md:mb-0 text-center" data-aos="fade-up"
+                    >
+                        <img
+                            src="./pictures/Nature HD Wallpapers 217.jpg"
+                            alt="اتصالات لوله‌ای"
+                            class="rounded-xl shadow-md mb-4 mx-auto h-40 w-40 object-cover" 
+                        />
+                        <h4 class="text-xl font-semibold text-gray-900 mb-2">
+                            اتصالات لوله‌ای
+                        </h4>
+                        <p class="text-gray-700">
+                            تولید و عرضه انواع اتصالات لوله‌ای با استانداردهای
+                            بین‌المللی.
+                        </p>
+                    </div>
+                    <div
+                        class="w-full md:w-1/3 lg:w-1/4 mb-8 md:mb-0 text-center" data-aos="fade-up"
+                    >
+                        <img
+                            src="./pictures/Nature HD Wallpapers 131.jpg"
+                            alt="اتصالات هیدرولیک"
+                            class="rounded-xl shadow-md mb-4 mx-auto h-40 w-40 object-cover"
+                        />
+                        <h4 class="text-xl font-semibold text-gray-900 mb-2">
+                            اتصالات هیدرولیک
+                        </h4>
+                        <p class="text-gray-700">
+                            ارائه راهکارهای تخصصی در زمینه اتصالات هیدرولیک برای
+                            صنایع گوناگون.
+                        </p>
+                    </div>
+                    <div
+                        class="w-full md:w-1/3 lg:w-1/4 mb-8 md:mb-0 text-center"  data-aos="fade-up"
+                    >
+                        <img
+                            src="./pictures/Nature HD Wallpapers 135.jpg"
+                            alt="اتصالات استیل"
+                            class="rounded-xl shadow-md mb-4 mx-auto h-40 w-40 object-cover"
+                        />
+                        <h4 class="text-xl font-semibold text-gray-900 mb-2">
+                            اتصالات استیل
+                        </h4>
+                        <p class="text-gray-700">
+                            تامین اتصالات استیل با کیفیت بالا و مقاوم در برابر
+                            خوردگی و زنگ‌زدگی.
+                        </p>
+                    </div>
+                    <div
+                        class="w-full md:w-1/3 lg:w-1/4 mb-8 md:mb-0 text-center" data-aos="fade-up"
+                    >
+                        <img
+                            src="./pictures/Nature HD Wallpapers 217.jpg"
+                            alt="اتصالات سفارشی"
+                            class="rounded-xl shadow-md mb-4 mx-auto h-40 w-40 object-cover"
+                        />
+                        <h4 class="text-xl font-semibold text-gray-900 mb-2">
+                            اتصالات سفارشی
+                        </h4>
+                        <p class="text-gray-700">
+                            طراحی و تولید اتصالات فلزی سفارشی بر اساس نیاز و
+                            سفارش مشتریان.
+                        </p>
+                    </div>
+
+                    <div
+                    class="w-full md:w-1/3 lg:w-1/4 mb-8 md:mb-0 text-center"  data-aos="fade-up"
+                >
+                    <img
+                        src="./pictures/Nature HD Wallpapers 135.jpg"
+                        alt="اتصالات استیل"
+                        class="rounded-xl shadow-md mb-4 mx-auto h-40 w-40 object-cover"
+                    />
+                    <h4 class="text-xl font-semibold text-gray-900 mb-2">
+                        اتصالات استیل
+                    </h4>
+                    <p class="text-gray-700">
+                        تامین اتصالات استیل با کیفیت بالا و مقاوم در برابر
+                        خوردگی و زنگ‌زدگی.
+                    </p>
+                </div>
+
+                <div
+                class="w-full md:w-1/3 lg:w-1/4 mb-8 md:mb-0 text-center" data-aos="fade-up"
+            >
+                <img
+                    src="./pictures/Nature HD Wallpapers 217.jpg"
+                    alt="اتصالات سفارشی"
+                    class="rounded-xl shadow-md mb-4 mx-auto h-40 w-40 object-cover"
+                />
+                <h4 class="text-xl font-semibold text-gray-900 mb-2">
+                    اتصالات سفارشی
+                </h4>
+                <p class="text-gray-700">
+                    طراحی و تولید اتصالات فلزی سفارشی بر اساس نیاز و
+                    سفارش مشتریان.
+                </p>
+            </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+
+
+        <section
+            class="why-choose-us-section py-20 bg-gray-100"
+           
+        >
+            <div class="container mx-auto px-4">
+                <h2
+                    class="text-3xl font-semibold text-gray-900 mb-8 text-center"
+                >
+                    چرا ما را انتخاب کنید؟
+                </h2>
+                <div class="lg:flex lg:flex-wrap justify-center gap-8" >
+                    <div class="lg:w-1/2 xl:w-1/3 mb-8 lg:mb-0">
+                        <div
+                        data-aos="slide-up"  class="bg-white rounded-xl shadow-md p-8 h-full flex flex-col justify-center items-center text-center"
+                        >
+                            <i
+                                class="bi bi-shield-check text-4xl text-blue-500 mb-4"
+                            ></i>
+                            <h3
+                                class="text-xl font-semibold text-gray-900 mb-2"
+                            >
+                                کیفیت بی‌نظیر
+                            </h3>
+                            <p class="text-gray-700">
+                                تعهد به ارائه محصولات با بالاترین استانداردهای
+                                کیفیت و دوام.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2 xl:w-1/3 mb-8 lg:mb-0">
+                        <div
+                        data-aos="slide-up" class="bg-white rounded-xl shadow-md p-8 h-full flex flex-col justify-center items-center text-center"
+                        >
+                            <i
+                                class="bi bi-boxes text-4xl text-blue-500 mb-4"
+                            ></i>
+                            <h3
+                                class="text-xl font-semibold text-gray-900 mb-2"
+                            >
+                                تنوع محصولات
+                            </h3>
+                            <p class="text-gray-700">
+                                ارائه طیف گسترده‌ای از اتصالات فلزی برای
+                                کاربردهای مختلف صنعتی.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2 xl:w-1/3 mb-8 lg:mb-0">
+                        <div
+                        data-aos="slide-up" class="bg-white rounded-xl shadow-md p-8 h-full flex flex-col justify-center items-center text-center"
+                        >
+                            <i
+                                class="bi bi-tags text-4xl text-blue-500 mb-4"
+                            ></i>
+                            <h3
+                                class="text-xl font-semibold text-gray-900 mb-2"
+                            >
+                                قیمت رقابتی
+                            </h3>
+                            <p class="text-gray-700">
+                                ارائه قیمت‌های منصفانه و رقابتی بدون کاهش کیفیت
+                                محصولات.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2 xl:w-1/3 mb-8 lg:mb-0">
+                        <div
+                        data-aos="slide-up" class="bg-white rounded-xl shadow-md p-8 h-full flex flex-col justify-center items-center text-center"
+                        >
+                            <i
+                                class="bi bi-headset text-4xl text-blue-500 mb-4"
+                            ></i>
+                            <h3
+                                class="text-xl font-semibold text-gray-900 mb-2"
+                            >
+                                خدمات مشتریان عالی
+                            </h3>
+                            <p class="text-gray-700">
+                                پشتیبانی فنی و خدمات پس از فروش حرفه‌ای و
+                                پاسخگو.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2 xl:w-1/3 mb-8 lg:mb-0">
+                        <div
+                        data-aos="slide-up" class="bg-white rounded-xl shadow-md p-8 h-full flex flex-col justify-center items-center text-center"
+                        >
+                            <i
+                                class="bi bi-gear text-4xl text-blue-500 mb-4"
+                            ></i>
+                            <h3
+                                class="text-xl font-semibold text-gray-900 mb-2"
+                            >
+                                تخصص و تجربه
+                            </h3>
+                            <p class="text-gray-700">
+                                تیم متخصص و با تجربه با دانش عمیق در زمینه
+                                اتصالات فلزی.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2 xl:w-1/3 mb-8 lg:mb-0">
+                        <div
+                        data-aos="slide-up" class="bg-white rounded-xl shadow-md p-8 h-full flex flex-col justify-center items-center text-center"
+                        >
+                            <i
+                                class="bi bi-wrench text-4xl text-blue-500 mb-4"
+                            ></i>
+                            <h3
+                                class="text-xl font-semibold text-gray-900 mb-2"
+                            >
+                                سفارشی‌سازی
+                            </h3>
+                            <p class="text-gray-700">
+                                امکان طراحی و تولید اتصالات سفارشی بر اساس
+                                نیازهای خاص مشتریان.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="-mb-1">
+        <path fill="oklch(0.872 0.01 258.338)" fill-opacity="1" d="M0,320L80,293.3C160,267,320,213,480,213.3C640,213,800,267,960,293.3C1120,320,1280,320,1360,320L1440,320L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+        </svg>
+
+        <section
+            class="certifications-section py-20 bg-gray-300"
+        >
+            <div class="container mx-auto px-4">
+                <h2
+                    class="text-3xl font-semibold text-gray-900 mb-8 text-center"
+                >
+                    گواهینامه‌ها و تضمین کیفیت
+                </h2>
+                <p
+                    class="text-lg text-gray-800 text-center max-w-2xl mx-auto mb-12"
+                >
+                    ما در [نام شرکت] به کیفیت محصولات خود اهمیت ویژه‌ای می‌دهیم
+                    و با افتخار گواهینامه‌های معتبر کیفیت را کسب کرده‌ایم.
+                </p>
+                <div class="flex flex-wrap justify-center gap-8">
+                    <div
+                    data-aos="fade-in" class="w-40 h-40 bg-gray-100 rounded-xl shadow-md flex items-center justify-center"
+                    >
+                        <img
+                            src="./pictures/iso9001.png"
+                            alt="  گواهی مورد نظر  "
+                            class="max-h-32 max-w-32"
+                        />
+                    </div>
+                    <div
+                    data-aos="fade-in" class="w-40 h-40 bg-gray-100 rounded-xl shadow-md flex items-center justify-center"
+                    >
+                        <img
+                            src="./pictures/standard-logo.png"
+                            alt="استاندارد ملی"
+                            class="max-h-32 max-w-32"
+                        />
+                    </div>
+                    <div
+                    data-aos="fade-in" class="w-40 h-40 bg-gray-100 rounded-xl shadow-md flex items-center justify-center"
+                    >
+                        <img
+                            src="./pictures/quality-seal.png"
+                            alt="نشان کیفیت"
+                            class="max-h-32 max-w-32"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="-mt-1">
+            <path fill="oklch(0.872 0.01 258.338)" fill-opacity="1" d="M0,0L80,10.7C160,21,320,43,480,42.7C640,43,800,21,960,21.3C1120,21,1280,43,1360,53.3L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+          </svg>
+
+        <!-- Contact Us Section -->
+        
+        <section
+            class="contact-us-section py-20 bg-gray-100 mb-40 lg:mb-70 md:-mt-60"
+            data-aos="fade-in"
+        >
+            <div class="container mx-auto px-4">
+                <h2
+                    class="text-3xl font-semibold text-gray-900 mb-8 text-center"
+                >
+                    ارتباط سریع
+                </h2>
+                <p
+                    class="text-lg text-gray-800 text-center max-w-2xl mx-auto mb-12"
+                >
+                    برای کسب اطلاعات بیشتر، مشاوره و ثبت سفارش، با ما در تماس
+                    باشید.
+                </p>
+                <div class="md:flex justify-center gap-8">
+                    <div class="md:w-1/2">
+                        <div class="bg-white rounded-xl shadow-md p-8">
+                            <h3
+                                class="text-xl font-semibold text-gray-900 mb-4"
+                            >
+                                فرم تماس
+                            </h3>
+                            <form action="#" method="post">
+                                <div class="mb-4">
+                                    <label
+                                        for="name"
+                                        class="block text-gray-700 text-sm font-bold mb-2"
+                                        >نام و نام خانوادگی</label
+                                    >
+                                    <input
+                                        type="text"
+                                        id="name"
+                                        name="name"
+                                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                    />
+                                </div>
+                                <div class="mb-4">
+                                    <label
+                                        for="email"
+                                        class="block text-gray-700 text-sm font-bold mb-2"
+                                        >ایمیل</label
+                                    >
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                    />
+                                </div>
+                                <div class="mb-4">
+                                    <label
+                                        for="message"
+                                        class="block text-gray-700 text-sm font-bold mb-2"
+                                        >پیام</label
+                                    >
+                                    <textarea
+                                        id="message"
+                                        name="message"
+                                        rows="5"
+                                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                    ></textarea>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <button
+                                        class=" bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded "
+                                        type="submit"
+                                    >
+                                        ارسال پیام
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 mt-4 md:mt-0">
+                        <div class="bg-white rounded-xl shadow-md p-8">
+                            <h3
+                                class="text-xl font-semibold text-gray-900 mb-4"
+                            >
+                                اطلاعات تماس
+                            </h3>
+                            <p class="text-gray-700 mb-2">
+                                <i class="bi bi-geo-alt-fill text-blue-500"></i>
+                                آدرس: [آدرس شرکت]
+                            </p>
+                            <p class="text-gray-700 mb-2">
+                                <i class="bi bi-phone-fill text-blue-500"></i>
+                                تلفن: [شماره تلفن]
+                            </p>
+                            <p class="text-gray-700 mb-2">
+                                <i
+                                    class="bi bi-envelope-fill text-blue-500"
+                                ></i>
+                                ایمیل:
+                                <a
+                                    href="mailto:[ایمیل شرکت]"
+                                    class="text-blue-500 hover:underline"
+                                    >[ایمیل شرکت]</a
+                                >
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- footer -->
+        <img
+            src="./pictures/layered-waves-haikei (2).svg "
+            alt=""
+            class="sm:-mt-68 lg:-mt-96 w-full"
+        />
+        <footer class="text-center">
+            <div class="bg-footer py-4 text-gray-400">
+                <div class="container px-4 mx-auto">
+                    <div class="-mx-4 flex flex-wrap justify-between">
+                        <div class="px-4 my-4 w-full xl:w-1/5">
+                            <p class="text-justify">
+                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از
+                                صنعت چاپ، و با استفاده از طراحان گرافیک است،
+                                چاپگرها و متون بلکه روزنامه و مجله در ستون و
+                                سطرآنچنان که لازم است، و برای شرایط فعلی
+                                تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف
+                                بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در
+                                شصت و سه درصد گذشته حال و آینده، شناخت
+                            </p>
+                        </div>
+
+                        <div class="px-4 my-4 w-full sm:w-auto">
+                            <div>
+                                <h2
+                                    class="inline-block text-2xl pb-4 mb-4 border-b-4 border-blue-600"
+                                >
+                                    جایگاه متن دلخواه
+                                </h2>
+                            </div>
+                            <ul class="leading-8 sm:text-start">
+                                <li>
+                                    <a href="#" class="hover:text-blue-400">
+                                        نمونه لینک
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:text-blue-400">
+                                        نمونه لینک
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:text-blue-400">
+                                        نمونه لینک
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:text-blue-400">
+                                        نمونه لینک
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="px-4 my-4 w-full sm:w-auto">
+                            <div>
+                                <h2
+                                    class="inline-block text-2xl pb-4 mb-4 border-b-4 border-blue-600"
+                                >
+                                    صفحات وبسایت
+                                </h2>
+                            </div>
+                            <ul class="leading-8 sm:text-start">
+                                <li>
+                                    <a href="#" class="hover:text-blue-400">
+                                        صفحه ها
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:text-blue-400">
+                                        صفحه ها
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:text-blue-400">
+                                        صفحه ها
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:text-blue-400">
+                                        صفحه ها
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="px-4 my-4 w-full sm:w-auto xl:w-1/5">
+                            <div class="text-center">
+                                <h2
+                                    class="inline-block text-2xl pb-4 mb-4 border-b-4 border-blue-600"
+                                >
+                                    راه های ارتباط با ما
+                                </h2>
+                            </div>
+                            <a
+                                href="#"
+                                class="inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full hover:text-blue-400 hover:border-blue-400"
+                            >
+                                <svg
+                                    class="w-4 h-4 fill-current"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 320 512"
+                                >
+                                    <path
+                                        d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
+                                    ></path>
+                                </svg>
+                            </a>
+                            <a
+                                href="#"
+                                class="inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full hover:text-blue-400 hover:border-blue-400"
+                            >
+                                <svg
+                                    class="w-4 h-4 fill-current"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512"
+                                >
+                                    <path
+                                        d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
+                                    ></path>
+                                </svg>
+                            </a>
+                            <a
+                                href="#"
+                                class="inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full hover:text-blue-400 hover:border-blue-400"
+                            >
+                                <svg
+                                    class="w-4 h-4 fill-current"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 448 512"
+                                >
+                                    <path
+                                        d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                                    ></path>
+                                </svg>
+                            </a>
+                            <a
+                                href="#"
+                                class="inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full hover:text-blue-400 hover:border-blue-400"
+                            >
+                                <svg
+                                    class="w-4 h-4 fill-current"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 496 512"
+                                >
+                                    <path
+                                        d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+                                    ></path>
+                                </svg>
+                            </a>
+                            <a
+                                href="#"
+                                class="inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full hover:text-blue-400 hover:border-blue-400"
+                            >
+                                <svg
+                                    class="w-4 h-4 fill-current"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 576 512"
+                                >
+                                    <path
+                                        d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"
+                                    ></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+        <script src="./about.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+    </body>
+</html>
