@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ارتباط با ما - نام وبسایت شما</title>
+    <link rel="icon" href="./pictures/favicon.ico" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body class="">
+    <div class="">
+        <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+        <!-- Basic navbar (same as before) -->
+        <div class="px-8 pt-4 <نو بار|navbar>" dir="ltr">
+            <nav
+                class="w-full h-12 bg-gray-900 mx-auto rounded-full md:flex flex-row-reverse px-2 py-2 gap-2 hidden">
+                <a href="#" class="w-8"><img src="./pictures/favicon.ico" alt="" /></a>
+                <button
+                    class="bg-gray-200 px-2 rounded-full hover:bg-blue-500 hover:text-white active:ring-gray-100 active:ring-2">
+                    Home
+                </button>
+                <button
+                    class="bg-gray-200 px-2 rounded-full hover:bg-blue-500 hover:text-white active:ring-gray-100 active:ring-2">
+                    About
+                </button>
+                <button
+                    class="bg-gray-200 px-2 rounded-full hover:bg-blue-500 hover:text-white active:ring-gray-100 active:ring-2">
+                    Contact us
+                </button>
+                <!-- button group -->
+                <div class="relative inline-block text-left">
+                    <div>
+                        <button type="button"
+                            class="inline-flex w-full justify-center gap-x-1.5 rounded-full bg-gray-200 px-2 py-1 text-gray-900 focus:bg-blue-500 focus:text-white focus:ring-gray-100 focus:ring-2 "
+                            id="menu-button" aria-expanded="true" aria-haspopup="true">
+                            Options
+                            <svg class="-mr-1 size-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor"
+                                aria-hidden="true" data-slot="icon">
+                                <path fill-rule="evenodd"
+                                    d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white ring-1 shadow-lg ring-black/5 focus:outline-hidden hidden"
+                        role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1"
+                        id="dropList">
+                        <div class="py-1" role="none">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
+                                id="menu-item-0">Account settings</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
+                                id="menu-item-1">Support</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
+                                id="menu-item-2">License</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- search box -->
+                <div class="flex-1"></div>
+                <a href="#"
+                    class="rounded-full bg-gray-200 px-2 flex items-center  hover:bg-blue-500 hover:text-white active:ring-gray-100 active:ring-2"><i
+                        class="bi bi-handbag  "></i></a>
+                <form role="search" class="flex">
+                    <button
+                        class="bg-gray-200 mx-2 px-2 rounded-full hover:bg-blue-500 hover:text-white active:ring-gray-100 active:ring-2">
+                        <i class="bi bi-search"></i>
+                    </button>
+                    <input type="search" class="bg-gray-200 rounded-full me-auto text-black px-2" aria-label="Search"
+                        placeholder="search" />
+                </form>
+            </nav>
+        </div>
+
+        <!-- Mobile navbar (same as before) -->
+        <div class="mobile-navbar | نوبار موبایل">
+            <nav
+                class="fixed top-0 left-0 right-0 h-16 glass-effect flex items-center justify-between px-4 border-b border-gray-300/30 z-50 md:hidden">
+                <!-- Logo -->
+                <a href="#">
+                    <div class="text-gray-900 font-bold text-xl">LOGO</div>
+                </a>
+                <!-- Search Box -->
+                <input type="text" placeholder="Search"
+                    class="bg-gray-100/50 rounded-full px-4 py-2 w-1/3 text-gray-900 focus:outline-none">
+                <a href="#"
+                    class="rounded-full  py-1 px-2 flex items-center  hover:text-white active:ring-gray-100 active:ring-2 -m -10 sm:-mx-32  "><i
+                        class="bi bi-handbag  "></i></a>
+                <!-- Menu Button -->
+                <button onclick="toggleMenu()"
+                    class="text-gray-900 p-2 rounded-full hover:bg-gray-100/30 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </nav>
+
+            <!-- Overlay Menu -->
+            <div class="nav-overlay fixed top-0 left-0 right-0  glass-effect z-50 shadow-lg rounded-b-4xl ">
+                <div class="p-4 flex flex-col space-y-4">
+                    <button class="text-gray-900 text-left py-2 px-4 rounded-lg hover:bg-gray-100/30">صفحه اصلی</button>
+                    <button class="text-gray-900 text-left py-2 px-4 rounded-lg hover:bg-gray-100/30">دکمه اول</button>
+                    <button class="text-gray-900 text-left py-2 px-4 rounded-lg hover:bg-gray-100/30">دکمه دوم</button>
+                    <button class="text-gray-900 text-left py-2 px-4 rounded-lg hover:bg-gray-100/30">دکمه سوم</button>
+                    <button class="text-gray-900 text-left py-2 px-4 rounded-lg hover:bg-gray-100/30">دکمه چهارم</button>
+                    <button class="text-gray-900 text-left py-2 px-4 rounded-lg hover:bg-gray-100/30">دکمه پنجم</button>
+                    <button onclick="toggleMenu()" class="absolute top-2 right-2 p-2 text-gray-900">
+                        ✕
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+        <section class="hero-section py-20 bg-gray-100 text-center m-10 rounded-xl mt-20 md:mt-10" data-aos="fade-in">
+            <div class="container mx-auto px-4">
+                <h1 class="text-4xl font-bold text-gray-900 mb-4">در تماس باشید</h1>
+                <p class="text-lg text-gray-800 max-w-2xl mx-auto">
+                    ما مشتاقانه منتظر شنیدن صدای شما هستیم! برای هرگونه سوال، درخواست مشاوره یا ثبت سفارش، از طریق راه‌های زیر
+                    با ما تماس بگیرید.
+                </p>
+            </div>
+        </section>
+
+        
+        <!-- Contact Information Section -->
+        <section class="contact-info-section  bg-white" >
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-semibold text-gray-900 mb-8 text-center">اطلاعات تماس</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
+
+                    <!-- Email -->
+                    <a href="mailto:info@example.com"
+                    data-aos="slide-up"
+                        class="contact-card bg-gray-100 rounded-xl p-6 text-center hover:bg-blue-500 hover:text-white transition-colors duration-300">
+                        <i class="bi bi-envelope-fill text-4xl mb-4 hover:text-white" style="color: #007bff;"></i>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2 hover:text-white">ایمیل</h3>
+                        <p class="text-gray-700 hover:text-white">info@example.com</p>
+                    </a>
+
+                    <!-- Phone -->
+                    <a href="tel:+1234567890"
+                    data-aos="slide-up"
+                        class="contact-card bg-gray-100 rounded-xl p-6 text-center hover:bg-green-500 hover:text-white transition-colors duration-300">
+                        <i class="bi bi-phone-fill text-4xl mb-4 hover:text-white" style="color: #28a745;"></i>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2 hover:text-white">تلفن</h3>
+                        <p class="text-gray-700 hover:text-white">+1 234 567 890</p>
+                    </a>
+
+                    <!-- Website -->
+                    <a href="https://example.com" target="_blank"
+                    data-aos="slide-up"
+                        class="contact-card bg-gray-100 rounded-xl p-6 text-center hover:bg-purple-500 hover:text-white transition-colors duration-300">
+                        <i class="bi bi-globe text-4xl mb-4 hover:text-white" style="color: #6f42c1;"></i>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2 hover:text-white">وبسایت</h3>
+                        <p class="text-gray-700 hover:text-white">www.example.com</p>
+                    </a>
+
+                    <!-- Instagram -->
+                    <a href="https://instagram.com/example" target="_blank"
+                    data-aos="slide-up"
+                        class="contact-card bg-gray-100 rounded-xl p-6 text-center hover:bg-pink-500 hover:text-white transition-colors duration-300">
+                        <i class="bi bi-instagram text-4xl mb-4 hover:text-white" style="color: #e95950;"></i>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2 hover:text-white">اینستاگرام</h3>
+                        <p class="text-gray-700 hover:text-white">@example</p>
+                    </a>
+
+                    <!-- LinkedIn -->
+                    <a href="https://linkedin.com/company/example" target="_blank"
+                    data-aos="slide-up"
+                        class="contact-card bg-gray-100 rounded-xl p-6 text-center hover:bg-blue-700 hover:text-white transition-colors duration-300">
+                        <i class="bi bi-linkedin text-4xl mb-4 hover:text-white" style="color: #0077b5;"></i>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2 hover:text-white">لینکدین</h3>
+                        <p class="text-gray-700 hover:text-white">Example Company</p>
+                    </a>
+
+                     <!-- Address -->
+                     <div
+                     data-aos="slide-up"
+                      class="contact-card bg-gray-100 rounded-xl p-6 text-center hover:bg-orange-500 hover:text-white transition-colors duration-300 cursor-default">
+                        <i class="bi bi-geo-alt-fill text-4xl mb-4 hover:text-white" style="color: #ff9800;"></i>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2 hover:text-white">آدرس</h3>
+                        <p class="text-gray-700 hover:text-white">
+                            [آدرس شرکت بصورت کامل]<br>
+                            [شهر، استان، کد پستی]
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+         <!-- Contact Form Section -->
+         <section class="contact-form-section mt-10 " data-aos="fade-in">
+            <div class="container mx-auto px-4">
+                <div class="bg-white rounded-xl shadow-md p-8 max-w-lg mx-auto">
+                    <h2 class="text-3xl font-semibold text-gray-900 mb-8 text-center">فرم تماس</h2>
+                    <form action="#" method="post">
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 text-sm font-bold mb-2">نام و نام خانوادگی</label>
+                            <input type="text" id="name" name="name"
+                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 text-sm font-bold mb-2">ایمیل</label>
+                            <input type="email" id="email" name="email"
+                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                        </div>
+                        <div class="mb-4">
+                            <label for="subject" class="block text-gray-700 text-sm font-bold mb-2">موضوع (اختیاری)</label>
+                            <input type="text" id="subject" name="subject"
+                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block text-gray-700 text-sm font-bold mb-2">پیام</label>
+                            <textarea id="message" name="message" rows="5"
+                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                        </div>
+                        <div class="flex items-center justify-center">  <!-- Center the button -->
+                            <button
+                                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                                type="submit">
+                                ارسال پیام
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+
+     
+
+        <!-- footer (same as before) -->
+        <img src="./pictures/layered-waves-haikei (2).svg " alt="" class=" w-full -mb-1">
+        <footer class="text-center">
+            <div class="bg-footer py-4 text-gray-400">
+                <div class="container px-4 mx-auto">
+                    <div class="-mx-4 flex flex-wrap justify-between">
+                        <div class="px-4 my-4 w-full xl:w-1/5">
+                            <p class="text-justify">
+                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک
+                                است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی
+                                تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در
+                                شصت و سه درصد گذشته حال و آینده، شناخت
+                            </p>
+                        </div>
+                        <div class="px-4 my-4 w-full sm:w-auto">
+                            <div>
+                                <h2 class="inline-block text-2xl pb-4 mb-4 border-b-4 border-blue-600"> جایگاه متن
+                                    دلخواه </h2>
+                            </div>
+                            <ul class="leading-8 sm:text-start">
+                                <li><a href="#" class="hover:text-blue-400"> نمونه لینک </a></li>
+                                <li><a href="#" class="hover:text-blue-400"> نمونه لینک </a></li>
+                                <li><a href="#" class="hover:text-blue-400"> نمونه لینک </a></li>
+                                <li><a href="#" class="hover:text-blue-400"> نمونه لینک </a></li>
+                            </ul>
+                        </div>
+                        <div class="px-4 my-4 w-full sm:w-auto">
+                            <div>
+                                <h2 class="inline-block text-2xl pb-4 mb-4 border-b-4 border-blue-600 "> صفحات وبسایت
+                                </h2>
+                            </div>
+                            <ul class="leading-8 sm:text-start">
+                                <li><a href="#" class="hover:text-blue-400"> صفحه ها </a></li>
+                                <li><a href="#" class="hover:text-blue-400"> صفحه ها </a></li>
+                                <li><a href="#" class="hover:text-blue-400"> صفحه ها </a></li>
+                                <li><a href="#" class="hover:text-blue-400"> صفحه ها </a></li>
+                            </ul>
+                        </div>
+                        <div class="px-4 my-4 w-full sm:w-auto xl:w-1/5">
+                            <div class="text-center ">
+                                <h2 class="inline-block text-2xl pb-4 mb-4 border-b-4 border-blue-600 "> راه های ارتباط
+                                    با ما </h2>
+                            </div>
+                            <a href="#"
+                                class=" inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full hover:text-blue-400 hover:border-blue-400">
+                                <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 320 512">
+                                    <path
+                                        d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="#"
+                                class="inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full  hover:text-blue-400 hover:border-blue-400">
+                                <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512">
+                                    <path
+                                        d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="#"
+                                class="inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full  hover:text-blue-400 hover:border-blue-400">
+                                <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 448 512">
+                                    <path
+                                        d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                                    ></path>
+                                </svg>
+                            </a>
+                            <a href="#"
+                                class="inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full hover:text-blue-400 hover:border-blue-400">
+                                <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 576 512">
+                                    <path
+                                        d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+        <script src="./index.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+</body>
+
+</html>
