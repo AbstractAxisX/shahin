@@ -142,3 +142,44 @@ body{
 .bg-footer{
     background-color: #1f1a2b ;
 }
+/* =================== */
+/* login styles */
+.login-box {
+    background-color: rgba(255, 255, 255, 0.7); /*  شفافیت کادر */
+    backdrop-filter: blur(15px);  /*  محو کردن پس‌زمینه */
+    -webkit-backdrop-filter: blur(15px); /*  برای سافاری */
+    transition: transform 0.3s ease; /*  انیمیشن برای بزرگ‌نمایی */
+}
+
+.login-input {
+  transition: border-color 0.3s ease, transform 0.3s ease; /*  برای انیمیشن */
+}
+
+
+
+.login-btn {
+    transition: transform 0.2s ease; /*  انیمیشن برای دکمه‌ها */
+}
+
+.login-btn:active {
+    transform: scale(0.95); /*  کمی کوچک شدن در کلیک */
+}
+
+/*  مخفی کردن فرم‌ها به صورت پیش‌فرض */
+#email-form, #phone-form {
+    /* display: none; */
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+
+}
+
+#email-form.active, #phone-form.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/*  استایل برای آیکون‌های Bootstrap */
+.bi {
+    font-size: 1.2rem; /*  اندازه آیکون‌ها */
+}

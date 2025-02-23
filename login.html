@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ورود / ثبت‌نام</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body class="bg-gray-100 flex items-center justify-center min-h-screen">
+        <div class="login-container relative">
+            <div
+                class="login-box bg-white/70 backdrop-blur-lg rounded-xl shadow-2xl p-8 w-full max-w-md relative z-10"
+            >
+                <h1 class="text-3xl font-bold text-center text-gray-900 mb-6">
+                    ورود / ثبت‌نام
+                </h1>
+
+                <div class="space-y-4">
+                    <!-- دکمه‌های انتخاب روش -->
+                    <button
+                        id="email-btn"
+                        class="login-btn w-full flex items-center justify-center py-3 px-4 rounded-full border-blue-500 border-2 font-semibold hover:bg-blue-600/30 transition duration-300"
+                    >
+                        <i class="bi bi-envelope-fill ml-2"></i>
+                        <span>ورود / ثبت‌نام با ایمیل</span>
+                    </button>
+
+                    <button
+                        id="phone-btn"
+                        class="login-btn w-full flex items-center justify-center py-3 px-4 rounded-full border-green-500 border-2 font-semibold hover:bg-green-600/30 transition duration-300"
+                    >
+                        <i class="bi bi-phone-fill ml-2"></i>
+                        <span>ورود / ثبت‌نام با شماره موبایل</span>
+                    </button>
+
+                    <button
+                        id="google-btn"
+                        class="login-btn w-full flex items-center justify-center py-3 px-4 rounded-full border-red-500 border-2 font-semibold hover:bg-red-600/30 transition duration-300"
+                    >
+                        <i class="bi bi-google ml-2"></i>
+                        <span>ورود با گوگل</span>
+                    </button>
+
+                    <!-- فرم ایمیل (مخفی در ابتدا) -->
+                    <form id="email-form" class="hidden space-y-4">
+                        <input
+                            type="email"
+                            placeholder="ایمیل"
+                            class="login-input w-full py-3 px-4 rounded-full border-2 border-gray-300 focus:outline-none focus:border-blue-500 transition duration-300"
+                        />
+                        <input
+                            type="text"
+                            placeholder="کد تایید"
+                            class="login-input w-full py-3 px-4 rounded-full border-2 border-gray-300 focus:outline-none focus:border-blue-500 transition duration-300"
+                        />
+                        <button
+                            type="submit"
+                            class="w-full py-3 px-4 rounded-full bg-blue-500 text-white font-semibold hover:bg-blue-600 transition duration-300"
+                        >
+                            تایید و ورود
+                        </button>
+                    </form>
+
+                    <!-- فرم شماره موبایل (مخفی در ابتدا) -->
+                    <form id="phone-form" class="hidden space-y-4">
+                        <input
+                            type="tel"
+                            placeholder="شماره موبایل"
+                            class="login-input w-full py-3 px-4 rounded-full border-2 border-gray-300 focus:outline-none focus:border-green-500 transition duration-300"
+                        />
+                        <input
+                            type="text"
+                            placeholder="کد تایید"
+                            class="login-input w-full py-3 px-4 rounded-full border-2 border-gray-300 focus:outline-none focus:border-green-500 transition duration-300"
+                        />
+                        <button
+                            type="submit"
+                            class="w-full py-3 px-4 rounded-full bg-green-500 text-white font-semibold hover:bg-green-600 transition duration-300"
+                        >
+                            تایید و ورود
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script>
+        const emailBtn = document.getElementById("email-btn");
+        const phoneBtn = document.getElementById("phone-btn");
+        const googleBtn = document.getElementById("google-btn"); 
+        const emailForm = document.getElementById("email-form");
+        const phoneForm = document.getElementById("phone-form");
+
+        emailBtn.addEventListener("click", () => {
+            emailForm.classList.remove("hidden");
+            emailForm.classList.add("active");
+            phoneForm.classList.add("hidden");
+            phoneForm.classList.remove("active");
+            showForm("email-form");
+        });
+        phoneBtn.addEventListener("click", () => {
+            phoneForm.classList.remove("hidden");
+            phoneForm.classList.add("active");
+            emailForm.classList.add("hidden");
+            emailForm.classList.remove("active");
+            showForm("email-form");
+        });
+        
+        emailForm.addEventListener("submit", (event) => {
+            event.preventDefault();
+            alert("فرم ایمیل ارسال شد ([جهت تست]!)");
+        });
+        phoneForm.addEventListener("submit", (event) => {
+            event.preventDefault();
+            alert("کد تایید ارسال شد ([جهت تست]!)");
+        });
+        googleBtn.addEventListener('click' , ()=>{
+            alert('  ورود با گوگل فعلا فعال نیست  ')
+        })
+    </script>
+</html>

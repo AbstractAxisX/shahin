@@ -118,3 +118,5 @@ prev.addEventListener('click', () => {
                               window.innerWidth >= 768 ? 0.1666 : 0.3333);
     slider.scrollBy({left: -scrollAmount, behavior: 'smooth'});
 });
+
+// ======================================
