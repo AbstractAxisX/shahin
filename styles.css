@@ -183,3 +183,52 @@ body{
 .bi {
     font-size: 1.2rem; /*  اندازه آیکون‌ها */
 }
+
+
+
+/* ================= */
+/* styles.css */
+
+
+/*  استایل دکمه‌های تگ */
+.tag-button {
+    @apply bg-transparent border border-gray-700 text-gray-800 py-2 px-4 rounded-full hover:bg-gray-700/20 transition duration-300;
+}
+
+
+/* moooooodaaaaaaal */
+
+/*  استایل دکمه‌های تگ */
+.tag-button {
+    @apply bg-transparent border border-gray-700 text-gray-800 py-2 px-4 rounded-full hover:bg-gray-700/20 transition duration-300;
+}
+
+/* انیمیشن باز شدن مودال (اختیاری) */
+#productModal.show {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+#productModal .modal-content {
+  transform: translateY(-20px); /*  از بالا بیاد پایین */
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#productModal.show .modal-content {
+  transform: translateY(0);
+  opacity: 1;
+}
+/*  استایل دکمه‌های انتخاب رنگ */
+#productModal .color-option {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-right: 8px;
+  cursor: pointer;
+  border: 2px solid transparent; /*  حاشیه پیش‌فرض */
+}
+
+#productModal .color-option.selected {
+  border-color: #999; /*  حاشیه برای رنگ انتخاب‌شده */
+}
