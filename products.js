@@ -78,3 +78,66 @@ button.addEventListener('click', () => {
     // filterProducts(activeTag);
 });
 });
+
+// ==============================
+// امتیازدهی با ستاره‌ها
+let currentRating = 0;
+const stars = document.querySelectorAll('.star');
+
+function updateStars(rating) {
+    stars.forEach((star, index) => {
+        if (index < rating) {
+            star.classList.add('text-yellow-400');
+            star.classList.remove('text-gray-300');
+        } else {
+            star.classList.remove('text-yellow-400');
+            star.classList.add('text-gray-300');
+        }
+    });
+}
+
+function rateProduct(rating) {
+    currentRating = rating;
+    updateStars(rating);
+    // اینجا می‌توانید امتیاز را به سرور ارسال کنید یا ذخیره کنید
+    console.log(`امتیاز داده شده: ${rating}`);
+}
+
+// هایلایت ستاره‌ها هنگام هاور
+stars.forEach((star, index) => {
+    star.addEventListener('mouseover', () => {
+        if (!currentRating) updateStars(index + 1);
+    });
+    
+    star.addEventListener('mouseout', () => {
+        if (!currentRating) updateStars(0);
+        else updateStars(currentRating);
+    });
+});
+// =======================
+// تابع افزودن به سبد خرید
+function addToCart(name, price, image) {
+    const cartItems = JSON.parse(sessionStorage.getItem('cart')) || [];
+    
+    const newItem = {
+        name: name,
+        price: price.toLocaleString('fa-IR'),
+        image: image
+    };
+
+    cartItems.push(newItem);
+    sessionStorage.setItem('cart', JSON.stringify(cartItems));
+    
+    alert('محصول به سبد خرید اضافه شد!');
+}
+
+// تابع نمایش تعداد آیتم های سبد خرید (اختیاری)
+function updateCartCounter() {
+    const cartItems = JSON.parse(sessionStorage.getItem('cart')) || [];
+    document.getElementById('cartCounter').textContent = cartItems.length;
+}
+
+// فراخوانی هنگام لود صفحه
+document.addEventListener('DOMContentLoaded', () => {
+    updateCartCounter();
+});

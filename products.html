@@ -7,26 +7,28 @@
     <title>محصولات | [نام شرکت شما]</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="styles.css" />
+    
 </head>
 
 <body class="bg-gray-100">
 
 
-<!-- Hero Section -->
-<section class=" py-16 bg-gray-200 m-4 rounded-2xl">
-    <div class="container mx-auto px-4 text-center">
-        <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-            اتصالات فلزی با کیفیت برای پروژه‌های شما
-        </h1>
-        <p class="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto ">
-            بهترین قیمت، ارسال سریع، ضمانت کیفیت
-        </p>
+    <!-- Hero Section -->
+    <section class=" py-16 bg-gray-200 m-4 rounded-2xl">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+                اتصالات فلزی با کیفیت برای پروژه‌های شما
+            </h1>
+            <p class="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto ">
+                بهترین قیمت، ارسال سریع، ضمانت کیفیت
+            </p>
+        </div>
+    </section>
+
+    <!--  ادامه صفحه (سرچ باکس، لیست محصولات و ...) -->
     </div>
-</section>
-
-<!--  ادامه صفحه (سرچ باکس، لیست محصولات و ...) -->
-
     <!-- بخش جستجو و فیلترها -->
     <!-- <div class="flex flex-col md:flex-row items-center justify-center gap-4 mt-8 mx-auto w-full "> -->
     <div class="flex flex-col md:flex-row gap-2 mx-2 items-center mt-8 justify-center">
@@ -62,483 +64,487 @@
         </div>
     </div>
 
-
-    <!-- تگ ها از حالت شبکه دکمه ای به حالت دراپ داون تغییر کردند وو شبکه دکمه ای غیر فعال شد  -->
-    <!-- تگ‌ها -->
-    <!-- <div class="flex items-center gap-4 "> -->
-    <!-- <div class="flex flex-wrap gap-2 mx-auto justify-center">
-                    <button class="tag-button bg-gray-300 rounded-full p-2 border-2 border-gray-800 hover:bg-gray-400">محصولات فلزی</button>
-                    <button class="tag-button bg-gray-300 rounded-full p-2 border-2 border-gray-800 hover:bg-gray-400">چوبی</button>
-                    <button class="tag-button bg-gray-300 rounded-full p-2 border-2 border-gray-800 hover:bg-gray-400">استیل</button>
-                    <button class="tag-button bg-gray-300 rounded-full p-2 border-2 border-gray-800 hover:bg-gray-400">پلاستیکی</button>
-                    <button class="tag-button bg-gray-300 rounded-full p-2 border-2 border-gray-800 hover:bg-gray-400">آلومینیومی</button>
-                    <button class="tag-button bg-gray-300 rounded-full p-2 border-2 border-gray-800 hover:bg-gray-400">محصولات فلزی</button>
-                    <button class="tag-button bg-gray-300 rounded-full p-2 border-2 border-gray-800 hover:bg-gray-400">پلاستیکی</button>
-                    <button class="tag-button bg-gray-300 rounded-full p-2 border-2 border-gray-800 hover:bg-gray-400">آلومینیومی</button>
-                </div> -->
-
-
-    </div>
-    </div>
-
-
     <!-- products container -->
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-8 gap-6 mt-8 px-2 md:px-4">
 
         <!-- نمونه کارت محصول (بعداً با اطلاعات واقعی پر می‌شه) -->
-        <div class="flex-shrink-0 m-0 relative overflow-hidden bg-gray-700 rounded-lg max-w-xs shadow-lg group">
-            <svg class="absolute bottom-0 left-0 mb-8 scale-150 group-hover:scale-[1.65] transition-transform"
-                viewBox="0 0 375 283" fill="none" style="opacity: 0.1">
-                <rect x="159.52" y="175" width="152" height="152" rx="8" transform="rotate(-45 159.52 175)"
-                    fill="white" />
-                <rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)" fill="white" />
-            </svg>
-            <div onclick="openModal()"
-                class="relative pt-10 px-10 flex items-center justify-center group-hover:scale-110 transition-transform">
-                <div class="block absolute w-full h-full bottom-0 left-0 -mb-24" style="
+        <div class="  نمونه کارت محصول  " >
+            <div class="flex-shrink-0 m-0 relative overflow-hidden bg-gray-700 rounded-lg max-w-xs shadow-lg group">
+                
+                <div class="absolute m-2">
+                    <div class="off-label hidden bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                        % تخفیف
+                    </div>
+                </div>
+
+                <svg class="absolute bottom-0 left-0 mb-8 scale-150 group-hover:scale-[1.65] transition-transform"
+                    viewBox="0 0 375 283" fill="none" style="opacity: 0.1">
+                    <rect x="159.52" y="175" width="152" height="152" rx="8" transform="rotate(-45 159.52 175)"
+                        fill="white" />
+                    <rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)" fill="white" />
+                </svg>
+                <div onclick="openModal()"
+                    class="relative pt-10 px-10 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <div class="block absolute w-full h-full bottom-0 left-0 -mb-24" style="
                         background: radial-gradient(black, transparent 60%);
                         transform: rotate3d(0, 0, 1, 20deg)
                             scale3d(1, 0.6, 1);
                         opacity: 0.2;
                     "></div>
-                <img class="relative w-40"
-                    src="https://user-images.githubusercontent.com/2805249/64069899-8bdaa180-cc97-11e9-9b19-1a9e1a254c18.png"
-                    alt="" />
-            </div>
-            <div class="grid-cols-2 text-white px-4 sm:px-6 pb-4 pt-10 sm:pt-5 ">
-                <span class="block text-xl">Peace Lily</span>
+                    <img class="relative w-40"
+                        src="https://user-images.githubusercontent.com/2805249/64069899-8bdaa180-cc97-11e9-9b19-1a9e1a254c18.png"
+                        alt="" />
+                </div>
+                <div class="grid-cols-2 text-white px-4 sm:px-6 pb-4 pt-10 sm:pt-5 ">
+                    <span class="block text-xl">Peace Lily</span>
 
-                <div class="flex justify-between">
-                    <span class="block opacity-75 mt-2">Indoor</span>
-                    <span
-                        class=" min-w-14 text-center bg-gray-100 rounded-2xl mt-2 text-gray-900 text-xs font-bold p-1 leading-none flex items-center">
-                        10000 تومان </span>
+                    <div class="flex justify-between">
+                        <span class="block opacity-75 mt-2">Indoor</span>
+                        <span
+                            class=" min-w-14 text-center bg-gray-100 rounded-2xl mt-2 text-gray-900 text-xs font-bold p-1 leading-none flex items-center">
+                            10000 تومان </span>
+                    </div>
                 </div>
             </div>
+
+
         </div>
-        <div class="flex-shrink-0 m-0 relative overflow-hidden bg-gray-700 rounded-lg max-w-xs shadow-lg group">
-            <svg class="absolute bottom-0 left-0 mb-8 scale-150 group-hover:scale-[1.65] transition-transform"
-                viewBox="0 0 375 283" fill="none" style="opacity: 0.1">
-                <rect x="159.52" y="175" width="152" height="152" rx="8" transform="rotate(-45 159.52 175)"
-                    fill="white" />
-                <rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)" fill="white" />
-            </svg>
-            <div onclick="openModal()"
-                class="relative pt-10 px-10 flex items-center justify-center group-hover:scale-110 transition-transform">
-                <div class="block absolute w-full h-full bottom-0 left-0 -mb-24" style="
+        <div class="  نمونه کارت محصول  ">
+            <div class="flex-shrink-0 m-0 relative overflow-hidden bg-gray-700 rounded-lg max-w-xs shadow-lg group">
+                
+                <div class="absolute m-2">
+                    <div class="off-label  bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                        % تخفیف
+                    </div>
+                </div>
+
+                <svg class="absolute bottom-0 left-0 mb-8 scale-150 group-hover:scale-[1.65] transition-transform"
+                    viewBox="0 0 375 283" fill="none" style="opacity: 0.1">
+                    <rect x="159.52" y="175" width="152" height="152" rx="8" transform="rotate(-45 159.52 175)"
+                        fill="white" />
+                    <rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)" fill="white" />
+                </svg>
+                <div onclick="openModal()"
+                    class="relative pt-10 px-10 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <div class="block absolute w-full h-full bottom-0 left-0 -mb-24" style="
                         background: radial-gradient(black, transparent 60%);
                         transform: rotate3d(0, 0, 1, 20deg)
                             scale3d(1, 0.6, 1);
                         opacity: 0.2;
                     "></div>
-                <img class="relative w-40"
-                    src="https://user-images.githubusercontent.com/2805249/64069899-8bdaa180-cc97-11e9-9b19-1a9e1a254c18.png"
-                    alt="" />
-            </div>
-            <div class="grid-cols-2 text-white px-4 sm:px-6 pb-4 pt-10 sm:pt-5 ">
-                <span class="block text-xl">Peace Lily</span>
+                    <img class="relative w-40"
+                        src="https://user-images.githubusercontent.com/2805249/64069899-8bdaa180-cc97-11e9-9b19-1a9e1a254c18.png"
+                        alt="" />
+                </div>
+                <div class="grid-cols-2 text-white px-4 sm:px-6 pb-4 pt-10 sm:pt-5 ">
+                    <span class="block text-xl">Peace Lily</span>
 
-                <div class="flex justify-between">
-                    <span class="block opacity-75 mt-2">Indoor</span>
-                    <span
-                        class=" min-w-14 text-center bg-gray-100 rounded-2xl mt-2 text-gray-900 text-xs font-bold p-1 leading-none flex items-center">
-                        10000 تومان </span>
+                    <div class="flex justify-between">
+                        <span class="block opacity-75 mt-2">Indoor</span>
+                        <span
+                            class=" min-w-14 text-center bg-gray-100 rounded-2xl mt-2 text-gray-900 text-xs font-bold p-1 leading-none flex items-center">
+                            10000 تومان </span>
+                    </div>
                 </div>
             </div>
+
+
         </div>
-        <div class="flex-shrink-0 m-0 relative overflow-hidden bg-gray-700 rounded-lg max-w-xs shadow-lg group">
-            <svg class="absolute bottom-0 left-0 mb-8 scale-150 group-hover:scale-[1.65] transition-transform"
-                viewBox="0 0 375 283" fill="none" style="opacity: 0.1">
-                <rect x="159.52" y="175" width="152" height="152" rx="8" transform="rotate(-45 159.52 175)"
-                    fill="white" />
-                <rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)" fill="white" />
-            </svg>
-            <div onclick="openModal()"
-                class="relative pt-10 px-10 flex items-center justify-center group-hover:scale-110 transition-transform">
-                <div class="block absolute w-full h-full bottom-0 left-0 -mb-24" style="
+        <div class="  نمونه کارت محصول  ">
+            <div class="flex-shrink-0 m-0 relative overflow-hidden bg-gray-700 rounded-lg max-w-xs shadow-lg group">
+                
+                <div class="absolute m-2">
+                    <div class="off-label hidden bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                        % تخفیف
+                    </div>
+                </div>
+
+                <svg class="absolute bottom-0 left-0 mb-8 scale-150 group-hover:scale-[1.65] transition-transform"
+                    viewBox="0 0 375 283" fill="none" style="opacity: 0.1">
+                    <rect x="159.52" y="175" width="152" height="152" rx="8" transform="rotate(-45 159.52 175)"
+                        fill="white" />
+                    <rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)" fill="white" />
+                </svg>
+                <div onclick="openModal()"
+                    class="relative pt-10 px-10 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <div class="block absolute w-full h-full bottom-0 left-0 -mb-24" style="
                         background: radial-gradient(black, transparent 60%);
                         transform: rotate3d(0, 0, 1, 20deg)
                             scale3d(1, 0.6, 1);
                         opacity: 0.2;
                     "></div>
-                <img class="relative w-40"
-                    src="https://user-images.githubusercontent.com/2805249/64069899-8bdaa180-cc97-11e9-9b19-1a9e1a254c18.png"
-                    alt="" />
-            </div>
-            <div class="grid-cols-2 text-white px-4 sm:px-6 pb-4 pt-10 sm:pt-5 ">
-                <span class="block text-xl">Peace Lily</span>
+                    <img class="relative w-40"
+                        src="https://user-images.githubusercontent.com/2805249/64069899-8bdaa180-cc97-11e9-9b19-1a9e1a254c18.png"
+                        alt="" />
+                </div>
+                <div class="grid-cols-2 text-white px-4 sm:px-6 pb-4 pt-10 sm:pt-5 ">
+                    <span class="block text-xl">Peace Lily</span>
 
-                <div class="flex justify-between">
-                    <span class="block opacity-75 mt-2">Indoor</span>
-                    <span
-                        class=" min-w-14 text-center bg-gray-100 rounded-2xl mt-2 text-gray-900 text-xs font-bold p-1 leading-none flex items-center">
-                        10000 تومان </span>
+                    <div class="flex justify-between">
+                        <span class="block opacity-75 mt-2">Indoor</span>
+                        <span
+                            class=" min-w-14 text-center bg-gray-100 rounded-2xl mt-2 text-gray-900 text-xs font-bold p-1 leading-none flex items-center">
+                            10000 تومان </span>
+                    </div>
                 </div>
             </div>
+
+
         </div>
-        <div class="flex-shrink-0 m-0 relative overflow-hidden bg-gray-700 rounded-lg max-w-xs shadow-lg group">
-            <svg class="absolute bottom-0 left-0 mb-8 scale-150 group-hover:scale-[1.65] transition-transform"
-                viewBox="0 0 375 283" fill="none" style="opacity: 0.1">
-                <rect x="159.52" y="175" width="152" height="152" rx="8" transform="rotate(-45 159.52 175)"
-                    fill="white" />
-                <rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)" fill="white" />
-            </svg>
-            <div onclick="openModal()"
-                class="relative pt-10 px-10 flex items-center justify-center group-hover:scale-110 transition-transform">
-                <div class="block absolute w-full h-full bottom-0 left-0 -mb-24" style="
+        <div class="  نمونه کارت محصول  ">
+            <div class="flex-shrink-0 m-0 relative overflow-hidden bg-gray-700 rounded-lg max-w-xs shadow-lg group">
+                
+                <div class="absolute m-2">
+                    <div class="off-label hidden bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                        % تخفیف
+                    </div>
+                </div>
+
+                <svg class="absolute bottom-0 left-0 mb-8 scale-150 group-hover:scale-[1.65] transition-transform"
+                    viewBox="0 0 375 283" fill="none" style="opacity: 0.1">
+                    <rect x="159.52" y="175" width="152" height="152" rx="8" transform="rotate(-45 159.52 175)"
+                        fill="white" />
+                    <rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)" fill="white" />
+                </svg>
+                <div onclick="openModal()"
+                    class="relative pt-10 px-10 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <div class="block absolute w-full h-full bottom-0 left-0 -mb-24" style="
                         background: radial-gradient(black, transparent 60%);
                         transform: rotate3d(0, 0, 1, 20deg)
                             scale3d(1, 0.6, 1);
                         opacity: 0.2;
                     "></div>
-                <img class="relative w-40"
-                    src="https://user-images.githubusercontent.com/2805249/64069899-8bdaa180-cc97-11e9-9b19-1a9e1a254c18.png"
-                    alt="" />
-            </div>
-            <div class="grid-cols-2 text-white px-4 sm:px-6 pb-4 pt-10 sm:pt-5 ">
-                <span class="block text-xl">Peace Lily</span>
+                    <img class="relative w-40"
+                        src="https://user-images.githubusercontent.com/2805249/64069899-8bdaa180-cc97-11e9-9b19-1a9e1a254c18.png"
+                        alt="" />
+                </div>
+                <div class="grid-cols-2 text-white px-4 sm:px-6 pb-4 pt-10 sm:pt-5 ">
+                    <span class="block text-xl">Peace Lily</span>
 
-                <div class="flex justify-between">
-                    <span class="block opacity-75 mt-2">Indoor</span>
-                    <span
-                        class=" min-w-14 text-center bg-gray-100 rounded-2xl mt-2 text-gray-900 text-xs font-bold p-1 leading-none flex items-center">
-                        10000 تومان </span>
+                    <div class="flex justify-between">
+                        <span class="block opacity-75 mt-2">Indoor</span>
+                        <span
+                            class=" min-w-14 text-center bg-gray-100 rounded-2xl mt-2 text-gray-900 text-xs font-bold p-1 leading-none flex items-center">
+                            10000 تومان </span>
+                    </div>
                 </div>
             </div>
+
+
         </div>
-        <div class="flex-shrink-0 m-0 relative overflow-hidden bg-gray-700 rounded-lg max-w-xs shadow-lg group">
-            <svg class="absolute bottom-0 left-0 mb-8 scale-150 group-hover:scale-[1.65] transition-transform"
-                viewBox="0 0 375 283" fill="none" style="opacity: 0.1">
-                <rect x="159.52" y="175" width="152" height="152" rx="8" transform="rotate(-45 159.52 175)"
-                    fill="white" />
-                <rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)" fill="white" />
-            </svg>
-            <div onclick="openModal()"
-                class="relative pt-10 px-10 flex items-center justify-center group-hover:scale-110 transition-transform">
-                <div class="block absolute w-full h-full bottom-0 left-0 -mb-24" style="
+        <div class="  نمونه کارت محصول  ">
+            <div class="flex-shrink-0 m-0 relative overflow-hidden bg-gray-700 rounded-lg max-w-xs shadow-lg group">
+                
+                <div class="absolute m-2">
+                    <div class="off-label hidden bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                        % تخفیف
+                    </div>
+                </div>
+
+                <svg class="absolute bottom-0 left-0 mb-8 scale-150 group-hover:scale-[1.65] transition-transform"
+                    viewBox="0 0 375 283" fill="none" style="opacity: 0.1">
+                    <rect x="159.52" y="175" width="152" height="152" rx="8" transform="rotate(-45 159.52 175)"
+                        fill="white" />
+                    <rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)" fill="white" />
+                </svg>
+                <div onclick="openModal()"
+                    class="relative pt-10 px-10 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <div class="block absolute w-full h-full bottom-0 left-0 -mb-24" style="
                         background: radial-gradient(black, transparent 60%);
                         transform: rotate3d(0, 0, 1, 20deg)
                             scale3d(1, 0.6, 1);
                         opacity: 0.2;
                     "></div>
-                <img class="relative w-40"
-                    src="https://user-images.githubusercontent.com/2805249/64069899-8bdaa180-cc97-11e9-9b19-1a9e1a254c18.png"
-                    alt="" />
-            </div>
-            <div class="grid-cols-2 text-white px-4 sm:px-6 pb-4 pt-10 sm:pt-5 ">
-                <span class="block text-xl">Peace Lily</span>
+                    <img class="relative w-40"
+                        src="https://user-images.githubusercontent.com/2805249/64069899-8bdaa180-cc97-11e9-9b19-1a9e1a254c18.png"
+                        alt="" />
+                </div>
+                <div class="grid-cols-2 text-white px-4 sm:px-6 pb-4 pt-10 sm:pt-5 ">
+                    <span class="block text-xl">Peace Lily</span>
 
-                <div class="flex justify-between">
-                    <span class="block opacity-75 mt-2">Indoor</span>
-                    <span
-                        class=" min-w-14 text-center bg-gray-100 rounded-2xl mt-2 text-gray-900 text-xs font-bold p-1 leading-none flex items-center">
-                        10000 تومان </span>
+                    <div class="flex justify-between">
+                        <span class="block opacity-75 mt-2">Indoor</span>
+                        <span
+                            class=" min-w-14 text-center bg-gray-100 rounded-2xl mt-2 text-gray-900 text-xs font-bold p-1 leading-none flex items-center">
+                            10000 تومان </span>
+                    </div>
                 </div>
             </div>
+
+
         </div>
-        <div class="flex-shrink-0 m-0 relative overflow-hidden bg-gray-700 rounded-lg max-w-xs shadow-lg group">
-            <svg class="absolute bottom-0 left-0 mb-8 scale-150 group-hover:scale-[1.65] transition-transform"
-                viewBox="0 0 375 283" fill="none" style="opacity: 0.1">
-                <rect x="159.52" y="175" width="152" height="152" rx="8" transform="rotate(-45 159.52 175)"
-                    fill="white" />
-                <rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)" fill="white" />
-            </svg>
-            <div onclick="openModal()"
-                class="relative pt-10 px-10 flex items-center justify-center group-hover:scale-110 transition-transform">
-                <div class="block absolute w-full h-full bottom-0 left-0 -mb-24" style="
+        <div class="  نمونه کارت محصول  ">
+            <div class="flex-shrink-0 m-0 relative overflow-hidden bg-gray-700 rounded-lg max-w-xs shadow-lg group">
+                
+                <div class="absolute m-2">
+                    <div class="off-label hidden bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                        % تخفیف
+                    </div>
+                </div>
+
+                <svg class="absolute bottom-0 left-0 mb-8 scale-150 group-hover:scale-[1.65] transition-transform"
+                    viewBox="0 0 375 283" fill="none" style="opacity: 0.1">
+                    <rect x="159.52" y="175" width="152" height="152" rx="8" transform="rotate(-45 159.52 175)"
+                        fill="white" />
+                    <rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)" fill="white" />
+                </svg>
+                <div onclick="openModal()"
+                    class="relative pt-10 px-10 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <div class="block absolute w-full h-full bottom-0 left-0 -mb-24" style="
                         background: radial-gradient(black, transparent 60%);
                         transform: rotate3d(0, 0, 1, 20deg)
                             scale3d(1, 0.6, 1);
                         opacity: 0.2;
                     "></div>
-                <img class="relative w-40"
-                    src="https://user-images.githubusercontent.com/2805249/64069899-8bdaa180-cc97-11e9-9b19-1a9e1a254c18.png"
-                    alt="" />
-            </div>
-            <div class="grid-cols-2 text-white px-4 sm:px-6 pb-4 pt-10 sm:pt-5 ">
-                <span class="block text-xl">Peace Lily</span>
+                    <img class="relative w-40"
+                        src="https://user-images.githubusercontent.com/2805249/64069899-8bdaa180-cc97-11e9-9b19-1a9e1a254c18.png"
+                        alt="" />
+                </div>
+                <div class="grid-cols-2 text-white px-4 sm:px-6 pb-4 pt-10 sm:pt-5 ">
+                    <span class="block text-xl">Peace Lily</span>
 
-                <div class="flex justify-between">
-                    <span class="block opacity-75 mt-2">Indoor</span>
-                    <span
-                        class=" min-w-14 text-center bg-gray-100 rounded-2xl mt-2 text-gray-900 text-xs font-bold p-1 leading-none flex items-center">
-                        10000 تومان </span>
+                    <div class="flex justify-between">
+                        <span class="block opacity-75 mt-2">Indoor</span>
+                        <span
+                            class=" min-w-14 text-center bg-gray-100 rounded-2xl mt-2 text-gray-900 text-xs font-bold p-1 leading-none flex items-center">
+                            10000 تومان </span>
+                    </div>
                 </div>
             </div>
+
+
         </div>
-        <div class="flex-shrink-0 m-0 relative overflow-hidden bg-gray-700 rounded-lg max-w-xs shadow-lg group">
-            <svg class="absolute bottom-0 left-0 mb-8 scale-150 group-hover:scale-[1.65] transition-transform"
-                viewBox="0 0 375 283" fill="none" style="opacity: 0.1">
-                <rect x="159.52" y="175" width="152" height="152" rx="8" transform="rotate(-45 159.52 175)"
-                    fill="white" />
-                <rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)" fill="white" />
-            </svg>
-            <div onclick="openModal()"
-                class="relative pt-10 px-10 flex items-center justify-center group-hover:scale-110 transition-transform">
-                <div class="block absolute w-full h-full bottom-0 left-0 -mb-24" style="
+        <div class="  نمونه کارت محصول  " >
+            <div class="flex-shrink-0 m-0 relative overflow-hidden bg-gray-700 rounded-lg max-w-xs shadow-lg group">
+                
+                <div class="absolute m-2">
+                    <div class="off-label hidden bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                        % تخفیف
+                    </div>
+                </div>
+
+                <svg class="absolute bottom-0 left-0 mb-8 scale-150 group-hover:scale-[1.65] transition-transform"
+                    viewBox="0 0 375 283" fill="none" style="opacity: 0.1">
+                    <rect x="159.52" y="175" width="152" height="152" rx="8" transform="rotate(-45 159.52 175)"
+                        fill="white" />
+                    <rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)" fill="white" />
+                </svg>
+                <div onclick="openModal()"
+                    class="relative pt-10 px-10 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <div class="block absolute w-full h-full bottom-0 left-0 -mb-24" style="
                         background: radial-gradient(black, transparent 60%);
                         transform: rotate3d(0, 0, 1, 20deg)
                             scale3d(1, 0.6, 1);
                         opacity: 0.2;
                     "></div>
-                <img class="relative w-40"
-                    src="https://user-images.githubusercontent.com/2805249/64069899-8bdaa180-cc97-11e9-9b19-1a9e1a254c18.png"
-                    alt="" />
-            </div>
-            <div class="grid-cols-2 text-white px-4 sm:px-6 pb-4 pt-10 sm:pt-5 ">
-                <span class="block text-xl">Peace Lily</span>
+                    <img class="relative w-40"
+                        src="https://user-images.githubusercontent.com/2805249/64069899-8bdaa180-cc97-11e9-9b19-1a9e1a254c18.png"
+                        alt="" />
+                </div>
+                <div class="grid-cols-2 text-white px-4 sm:px-6 pb-4 pt-10 sm:pt-5 ">
+                    <span class="block text-xl">Peace Lily</span>
 
-                <div class="flex justify-between">
-                    <span class="block opacity-75 mt-2">Indoor</span>
-                    <span
-                        class=" min-w-14 text-center bg-gray-100 rounded-2xl mt-2 text-gray-900 text-xs font-bold p-1 leading-none flex items-center">
-                        10000 تومان </span>
+                    <div class="flex justify-between">
+                        <span class="block opacity-75 mt-2">Indoor</span>
+                        <span
+                            class=" min-w-14 text-center bg-gray-100 rounded-2xl mt-2 text-gray-900 text-xs font-bold p-1 leading-none flex items-center">
+                            10000 تومان </span>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="flex-shrink-0 m-0 relative overflow-hidden bg-gray-700 rounded-lg max-w-xs shadow-lg group">
-            <svg class="absolute bottom-0 left-0 mb-8 scale-150 group-hover:scale-[1.65] transition-transform"
-                viewBox="0 0 375 283" fill="none" style="opacity: 0.1">
-                <rect x="159.52" y="175" width="152" height="152" rx="8" transform="rotate(-45 159.52 175)"
-                    fill="white" />
-                <rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)" fill="white" />
-            </svg>
-            <div onclick="openModal()"
-                class="relative pt-10 px-10 flex items-center justify-center group-hover:scale-110 transition-transform">
-                <div class="block absolute w-full h-full bottom-0 left-0 -mb-24" style="
-                        background: radial-gradient(black, transparent 60%);
-                        transform: rotate3d(0, 0, 1, 20deg)
-                            scale3d(1, 0.6, 1);
-                        opacity: 0.2;
-                    "></div>
-                <img class="relative w-40"
-                    src="https://user-images.githubusercontent.com/2805249/64069899-8bdaa180-cc97-11e9-9b19-1a9e1a254c18.png"
-                    alt="" />
-            </div>
-            <div class="grid-cols-2 text-white px-4 sm:px-6 pb-4 pt-10 sm:pt-5 ">
-                <span class="block text-xl">Peace Lily</span>
 
-                <div class="flex justify-between">
-                    <span class="block opacity-75 mt-2">Indoor</span>
-                    <span
-                        class=" min-w-14 text-center bg-gray-100 rounded-2xl mt-2 text-gray-900 text-xs font-bold p-1 leading-none flex items-center">
-                        10000 تومان </span>
-                </div>
-            </div>
-        </div>
-        <div class="flex-shrink-0 m-0 relative overflow-hidden bg-gray-700 rounded-lg max-w-xs shadow-lg group">
-            <svg class="absolute bottom-0 left-0 mb-8 scale-150 group-hover:scale-[1.65] transition-transform"
-                viewBox="0 0 375 283" fill="none" style="opacity: 0.1">
-                <rect x="159.52" y="175" width="152" height="152" rx="8" transform="rotate(-45 159.52 175)"
-                    fill="white" />
-                <rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)" fill="white" />
-            </svg>
-            <div onclick="openModal()"
-                class="relative pt-10 px-10 flex items-center justify-center group-hover:scale-110 transition-transform">
-                <div class="block absolute w-full h-full bottom-0 left-0 -mb-24" style="
-                        background: radial-gradient(black, transparent 60%);
-                        transform: rotate3d(0, 0, 1, 20deg)
-                            scale3d(1, 0.6, 1);
-                        opacity: 0.2;
-                    "></div>
-                <img class="relative w-40"
-                    src="https://user-images.githubusercontent.com/2805249/64069899-8bdaa180-cc97-11e9-9b19-1a9e1a254c18.png"
-                    alt="" />
-            </div>
-            <div class="grid-cols-2 text-white px-4 sm:px-6 pb-4 pt-10 sm:pt-5 ">
-                <span class="block text-xl">Peace Lily</span>
 
-                <div class="flex justify-between">
-                    <span class="block opacity-75 mt-2">Indoor</span>
-                    <span
-                        class=" min-w-14 text-center bg-gray-100 rounded-2xl mt-2 text-gray-900 text-xs font-bold p-1 leading-none flex items-center">
-                        10000 تومان </span>
-                </div>
-            </div>
         </div>
-        <div class="flex-shrink-0 m-0 relative overflow-hidden bg-gray-700 rounded-lg max-w-xs shadow-lg group">
-            <svg class="absolute bottom-0 left-0 mb-8 scale-150 group-hover:scale-[1.65] transition-transform"
-                viewBox="0 0 375 283" fill="none" style="opacity: 0.1">
-                <rect x="159.52" y="175" width="152" height="152" rx="8" transform="rotate(-45 159.52 175)"
-                    fill="white" />
-                <rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)" fill="white" />
-            </svg>
-            <div onclick="openModal()"
-                class="relative pt-10 px-10 flex items-center justify-center group-hover:scale-110 transition-transform">
-                <div class="block absolute w-full h-full bottom-0 left-0 -mb-24" style="
-                        background: radial-gradient(black, transparent 60%);
-                        transform: rotate3d(0, 0, 1, 20deg)
-                            scale3d(1, 0.6, 1);
-                        opacity: 0.2;
-                    "></div>
-                <img class="relative w-40"
-                    src="https://user-images.githubusercontent.com/2805249/64069899-8bdaa180-cc97-11e9-9b19-1a9e1a254c18.png"
-                    alt="" />
-            </div>
-            <div class="grid-cols-2 text-white px-4 sm:px-6 pb-4 pt-10 sm:pt-5 ">
-                <span class="block text-xl">Peace Lily</span>
 
-                <div class="flex justify-between">
-                    <span class="block opacity-75 mt-2">Indoor</span>
-                    <span
-                        class=" min-w-14 text-center bg-gray-100 rounded-2xl mt-2 text-gray-900 text-xs font-bold p-1 leading-none flex items-center">
-                        10000 تومان </span>
-                </div>
-            </div>
-        </div>
-        <div class="flex-shrink-0 m-0 relative overflow-hidden bg-gray-700 rounded-lg max-w-xs shadow-lg group">
-            <svg class="absolute bottom-0 left-0 mb-8 scale-150 group-hover:scale-[1.65] transition-transform"
-                viewBox="0 0 375 283" fill="none" style="opacity: 0.1">
-                <rect x="159.52" y="175" width="152" height="152" rx="8" transform="rotate(-45 159.52 175)"
-                    fill="white" />
-                <rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)" fill="white" />
-            </svg>
-            <div onclick="openModal()"
-                class="relative pt-10 px-10 flex items-center justify-center group-hover:scale-110 transition-transform">
-                <div class="block absolute w-full h-full bottom-0 left-0 -mb-24" style="
-                        background: radial-gradient(black, transparent 60%);
-                        transform: rotate3d(0, 0, 1, 20deg)
-                            scale3d(1, 0.6, 1);
-                        opacity: 0.2;
-                    "></div>
-                <img class="relative w-40"
-                    src="https://user-images.githubusercontent.com/2805249/64069899-8bdaa180-cc97-11e9-9b19-1a9e1a254c18.png"
-                    alt="" />
-            </div>
-            <div class="grid-cols-2 text-white px-4 sm:px-6 pb-4 pt-10 sm:pt-5 ">
-                <span class="block text-xl">Peace Lily</span>
-
-                <div class="flex justify-between">
-                    <span class="block opacity-75 mt-2">Indoor</span>
-                    <span
-                        class=" min-w-14 text-center bg-gray-100 rounded-2xl mt-2 text-gray-900 text-xs font-bold p-1 leading-none flex items-center">
-                        10000 تومان </span>
-                </div>
-            </div>
-        </div>
     </div>
 
 
-    <div id="modal"
-        class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 hidden opacity-0 transition-all duration-300 transform translate-y-8">
-        <div class="bg-white rounded-xl max-w-6xl w-full max-h-[90vh] overflow-auto relative">
-            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 z-10">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
-                    </path>
-                </svg>
-            </button>
 
-            <div class="flex flex-col md:flex-row">
-                <div class="md:w-1/2 p-6">
-                    <div class="relative aspect-square overflow-hidden rounded-lg ">
-                        <div id="imageSlider" class="flex transition-transform duration-300 ease-in-out">
-                            <img src="./pictures/Nature HD Wallpapers 164.jpg" alt="Product"
-                                class="w-full h-full object-cover flex-shrink-0">
-                            <img src="https://images.unsplash.com/photo-1505740106531-4243f3831c78" alt="Product"
-                                class="w-full h-full object-cover flex-shrink-0">
-                            <img src="./pictures/Nature HD Wallpapers 188.jpg" alt="Product"
-                                class="w-full h-full object-cover flex-shrink-0">
-                        </div>
-                        <button onclick="slideImage(-1)"
-                            class="absolute left-2 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-lg">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M15 19l-7-7 7-7"></path>
-                            </svg>
-                        </button>
-                        <button onclick="slideImage(1)"
-                            class="absolute right-2 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-lg">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
-                                </path>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="flex gap-2 overflow-x-auto py-2 px-1">
-                        <img onclick="showImage(0)" src="./pictures/Nature HD Wallpapers 164.jpg"
-                            alt="Thumbnail"
-                            class="w-20 h-20 object-cover rounded-lg cursor-pointer ring-2 ring-blue-500">
-                        <img onclick="showImage(1)" src="https://images.unsplash.com/photo-1505740106531-4243f3831c78"
-                            alt="Thumbnail" class="w-20 h-20 object-cover rounded-lg cursor-pointer">
-                        <img onclick="showImage(2)" src="./pictures/Nature HD Wallpapers 188.jpg"
-                            alt="Thumbnail" class="w-20 h-20 object-cover rounded-lg cursor-pointer">
-                    </div>
-                </div>
-                <div class="md:w-1/2 p-6 lg:border-l">
-                    <h1 class="text-3xl font-bold text-gray-900 mb-4"> نام محصول شما </h1>
-                    <p class="text-gray-600 mb-6">Experience crystal-clear sound with our premium wireless headphones.
-                        Featuring advanced noise cancellation technology, comfortable ear cups, and long-lasting battery
-                        life for endless entertainment.</p>
-                    <div class="mb-6">
-                        <h2 class="font-semibold text-gray-900 mb-2">Select Color</h2>
-                        <div class="flex gap-4">
-                            <label class="relative">
-                                <input type="radio" name="color" class="sr-only peer" checked>
-                                <div
-                                    class="w-8 h-8 rounded-full bg-black peer-checked:ring-2 peer-checked:ring-offset-2 peer-checked:ring-blue-500 cursor-pointer">
-                                </div>
-                            </label>
-                            <label class="relative">
-                                <input type="radio" name="color" class="sr-only peer">
-                                <div
-                                    class="w-8 h-8 rounded-full bg-white border peer-checked:ring-2 peer-checked:ring-offset-2 peer-checked:ring-blue-500 cursor-pointer">
-                                </div>
-                            </label>
-                            <label class="relative">
-                                <input type="radio" name="color" class="sr-only peer">
-                                <div
-                                    class="w-8 h-8 rounded-full bg-gradient-to-r from-gray-200 to-gray-400 peer-checked:ring-2 peer-checked:ring-offset-2 peer-checked:ring-blue-500 cursor-pointer">
-                                </div>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="flex items-center justify-between mb-6">
-                        <div class="flex items-center">
-                            <button
-                                class="w-8 h-8 rounded-full border flex items-center justify-center hover:bg-gray-100">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4">
+
+        <div id="modal"
+            class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 hidden opacity-0 transition-all duration-300 transform translate-y-8">
+            <div class="bg-white rounded-xl max-w-6xl w-full max-h-[90vh] overflow-auto relative">
+                <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 z-10">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </button>
+
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-1/2 p-6">
+                        <div class="relative aspect-square overflow-hidden rounded-lg ">
+                            <div id="imageSlider" class="flex transition-transform duration-300 ease-in-out">
+                                <img src="./pictures/Nature HD Wallpapers 164.jpg" alt="Product"
+                                    class="w-full h-full object-cover flex-shrink-0">
+                                <img src="https://images.unsplash.com/photo-1505740106531-4243f3831c78" alt="Product"
+                                    class="w-full h-full object-cover flex-shrink-0">
+                                <img src="./pictures/Nature HD Wallpapers 188.jpg" alt="Product"
+                                    class="w-full h-full object-cover flex-shrink-0">
+                            </div>
+                            <button onclick="slideImage(-1)"
+                                class="absolute left-2 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-lg">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 19l-7-7 7-7"></path>
+                                </svg>
+                            </button>
+                            <button onclick="slideImage(1)"
+                                class="absolute right-2 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-lg">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7">
                                     </path>
                                 </svg>
                             </button>
-                            <span class="mx-4 text-xl">1</span>
+                        </div>
+                        <div class="flex gap-2 overflow-x-auto py-2 px-1">
+                            <img onclick="showImage(0)" src="./pictures/Nature HD Wallpapers 164.jpg" alt="Thumbnail"
+                                class="w-20 h-20 object-cover rounded-lg cursor-pointer ring-2 ring-blue-500">
+                            <img onclick="showImage(1)"
+                                src="https://images.unsplash.com/photo-1505740106531-4243f3831c78" alt="Thumbnail"
+                                class="w-20 h-20 object-cover rounded-lg cursor-pointer">
+                            <img onclick="showImage(2)" src="./pictures/Nature HD Wallpapers 188.jpg" alt="Thumbnail"
+                                class="w-20 h-20 object-cover rounded-lg cursor-pointer">
+                        </div>
+                    </div>
+
+
+
+                    <div class="md:w-1/2 p-6 lg:border-l">
+                        <div class="md:w-1/2 p-6 lg:border-l">
+
+                            <!-- آیکون تخفیف در مودال -->
+                            <div
+                                class="modal-off-label  hidden  text-center bg-red-500 text-white text-sm font-bold px-3 py-1 rounded-full mb-2 max-w-32">
+                                %45 تخفیف ویژه
+                            </div>
+                        </div>
+
+                        <h1 class="text-3xl font-bold text-gray-900 mb-4"> نام محصول شما </h1>
+                        <p class="text-gray-600 mb-6">Experience crystal-clear sound with our premium wireless
+                            headphones.
+                            Featuring advanced noise cancellation technology, comfortable ear cups, and long-lasting
+                            battery
+                            life for endless entertainment.</p>
+
+
+
+                        <!-- بعد از تگ توضیحات محصول و قبل از بخش انتخاب رنگ -->
+                        <div class="mb-4">
+                            <h2 class="font-semibold text-gray-900 mb-2">امتیاز محصول</h2>
+                            <div class="flex items-center gap-1">
+                                <div class="rating-stars flex gap-1">
+                                    <!-- ستاره‌های ریتینگ -->
+                                    <button class="star text-gray-300 hover:text-yellow-400" onclick="rateProduct(1)">
+                                        <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                                            <path
+                                                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                        </svg>
+                                    </button>
+                                    <button class="star text-gray-300 hover:text-yellow-400" onclick="rateProduct(2)">
+                                        <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                                            <path
+                                                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                        </svg>
+                                    </button>
+                                    <button class="star text-gray-300 hover:text-yellow-400" onclick="rateProduct(3)">
+                                        <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                                            <path
+                                                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                        </svg>
+                                    </button>
+                                    <button class="star text-gray-300 hover:text-yellow-400" onclick="rateProduct(4)">
+                                        <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                                            <path
+                                                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                        </svg>
+                                    </button>
+                                    <button class="star text-gray-300 hover:text-yellow-400" onclick="rateProduct(5)">
+                                        <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                                            <path
+                                                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <span class="text-sm text-gray-500">(3.8 از 5)</span>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="mb-6">
+                            <h2 class="font-semibold text-gray-900 mb-2">Select Color</h2>
+                            <div class="flex gap-4">
+                                <label class="relative">
+                                    <input type="radio" name="color" class="sr-only peer" checked>
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-black peer-checked:ring-2 peer-checked:ring-offset-2 peer-checked:ring-blue-500 cursor-pointer">
+                                    </div>
+                                </label>
+                                <label class="relative">
+                                    <input type="radio" name="color" class="sr-only peer">
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-white border peer-checked:ring-2 peer-checked:ring-offset-2 peer-checked:ring-blue-500 cursor-pointer">
+                                    </div>
+                                </label>
+                                <label class="relative">
+                                    <input type="radio" name="color" class="sr-only peer">
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-gradient-to-r from-gray-200 to-gray-400 peer-checked:ring-2 peer-checked:ring-offset-2 peer-checked:ring-blue-500 cursor-pointer">
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="flex items-center">
+                                <button
+                                    class="w-8 h-8 rounded-full border flex items-center justify-center hover:bg-gray-100">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M20 12H4">
+                                        </path>
+                                    </svg>
+                                </button>
+                                <span class="mx-4 text-xl">1</span>
+                                <button
+                                    class="w-8 h-8 rounded-full border flex items-center justify-center hover:bg-gray-100">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 4v16m8-8H4"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <span class="text-2xl font-bold"> 1990000 تومان </span>
+                        </div>
+                        <div class="flex gap-4">
                             <button
-                                class="w-8 h-8 rounded-full border flex items-center justify-center hover:bg-gray-100">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                onclick="addToCart('محصول ۱', 10000, 'https://user-images.githubusercontent.com/2805249/64069899-8bdaa180-cc97-11e9-9b19-1a9e1a254c18.png')"
+                                class="flex-1 bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700">
+                                افزودن به سبد خرید </button>
+                            <button onclick="copyPageLink()" class="p-3 rounded-lg border bg-gray-100 hover:bg-gray-200"
+                                title="Copy Link">
+                                <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M12 4v16m8-8H4"></path>
+                                        d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3">
+                                    </path>
+                                </svg>
+                            </button>
+                            <button class="p-3 rounded-lg border hover:bg-gray-50">
+                                <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path>
                                 </svg>
                             </button>
                         </div>
-                        <span class="text-2xl font-bold"> 1990000 تومان </span>
-                    </div>
-                    <div class="flex gap-4">
-                        <button
-                            class="flex-1 bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700">
-                            افزودن به سبد خرید </button>
-                        <button onclick="copyPageLink()" class="p-3 rounded-lg border bg-gray-100 hover:bg-gray-200"
-                            title="Copy Link">
-                            <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3">
-                                </path>
-                            </svg>
-                        </button>
-                        <button class="p-3 rounded-lg border hover:bg-gray-50">
-                            <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path>
-                            </svg>
-                        </button>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-
-    <div class="mb-16"></div>
 
 </body>
 <script src="products.js"></script>
