@@ -9,10 +9,11 @@
 </head>
 <body class="bg-gray-100 min-h-screen p-4 sm:p-6">
     <div id="cartContainer" class="max-w-4xl mx-auto">
-        <h1 class="text-3xl font-bold text-gray-800 mb-6">سبد خرید شما</h1>
-        
+    <h1 class="text-3xl font-bold text-gray-800 mb-6">سبد خرید شما</h1>
+    
+    <form id="cartForm" action="checkout.php" method="post">
         <div id="cartItems" class="bg-white rounded-lg shadow-md p-4 mb-4">
-            <!-- آیتم های سبد خرید اینجا نمایش داده میشن -->
+            <!-- آیتم‌های سبد خرید اینجا نمایش داده می‌شوند -->
         </div>
 
         <div id="emptyCart" class="hidden text-center py-8">
@@ -25,29 +26,35 @@
         <div id="checkoutSection" class="hidden bg-white rounded-lg shadow-md p-4">
             <div class="flex justify-between items-center mb-4">
                 <span class="text-xl font-bold">مجموع:</span>
-                <span id="totalAmount" class="text-2xl font-bold text-green-600"> 0 تومان</span>
+                <span id="totalAmount" class="text-2xl font-bold text-green-600">0 تومان</span>
             </div>
+            <div class="flex flex-col-reverse sm:flex-row-reverse justify-between mt-8 sm:mt-0">
+                <div class="flex-1 mb-4 sm:mb-0 mx-auto " dir="ltr">
 
-            <div class="flex flex-col md:flex-row justify-between mt-8 md:mt-0">
-                
-                <form action="#" method="post" class="flex-1  mb-4 md:mb-0 mx-auto">
-                        <input
-                        placeholder=" کد تخفیف  را وارد کنید "
-                            type="text"
-                            id="name"
-                            name="name"
-                            class=" shadow appearance-none border rounded py-2  text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-36"
-                        />
-                    <button type="submit" class=" mr-2 py-2 bg-gray-400 text-white  rounded-lg px-2 hover:bg-gray-500">اعمال کد تخفیف</button>
-                </form>
 
-                <button onclick="checkout()" class="px-4 bg-green-600 text-white py-2 rounded-lg hover:bg-green-700">
-                    پرداخت نهایی
+                <input type="hidden" id="appliedDiscount" name="discountCode" value="">
+                <button type="submit" class="px-24 sm:px-8 bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 ">
+                    خرید نهایی
                 </button>
             </div>
-        </div>
-    </div>
 
+    </form>
+    <div class="flex-1 mb-4 sm:mb-0 mx-auto mt-2 " >
+                <form id="discountForm" >
+                    <input
+                        placeholder="کد تخفیف را وارد کنید"
+                        type="text"
+                        id="discountCode"
+                        name="discountCode"
+                        class="shadow appearance-none border rounded py-2 pr-1 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-36"
+                    />
+                    <button type="submit" class="mr-2 py-2 bg-gray-400 text-white rounded-lg px-2 hover:bg-gray-500">اعمال کد تخفیف</button>
+                </form></div>
+                </div>       
+        </div>
+</div>
+<div class="text-center">
+<button id="clearCartBtn" class="bg-gray-200 py-2 px-3 text-center rounded hover:bg-gray-300 mt-8">  خالی کردن سبد خرید  </button></div>
     <script src="cart.js"></script>
 </body>
 </html>

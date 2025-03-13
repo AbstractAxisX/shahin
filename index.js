@@ -120,3 +120,110 @@ prev.addEventListener('click', () => {
 });
 
 // ======================================
+
+// badge of buy icon
+function updateCartCounter() {
+    const cartItems = JSON.parse(sessionStorage.getItem('cart')) || [];
+    const count = cartItems.length;
+    document.getElementById('cartBadgeDesktop').textContent = count;
+    document.getElementById('cartBadgeMobile').textContent = count;
+}
+document.addEventListener('DOMContentLoaded', () => {
+    updateCartCounter();
+});
+function addToCart(name, price, image) {
+    const cartItems = JSON.parse(sessionStorage.getItem('cart')) || [];
+    
+    const newItem = {
+        name: name,
+        price: price.toLocaleString('fa-IR'),
+        image: image
+    };
+
+    cartItems.push(newItem);
+    sessionStorage.setItem('cart', JSON.stringify(cartItems));
+    
+    updateCartCounter(); // به‌روزرسانی بج
+    alert('محصول به سبد خرید اضافه شد!');
+}
+// dialog hover
+// متغیرها رو تعریف می‌کنیم
+const cartIconDesktop = document.querySelector('.desktop-navbar .bi-handbag').parentElement;
+const cartDialogDesktop = document.getElementById('cartDialogDesktop');
+let timeoutId; // این برای تاخیر استفاده می‌شه
+
+// وقتی موس روی آیکون می‌ره
+cartIconDesktop.addEventListener('mouseover', () => {
+    clearTimeout(timeoutId); // اگه تاخیری از قبل بود، لغوش کن
+    updateCartDialog('Desktop'); // دیالوگ رو به‌روزرسانی کن
+    cartDialogDesktop.classList.remove('hidden'); // دیالوگ رو نشون بده
+});
+
+// وقتی موس از روی آیکون خارج می‌شه
+cartIconDesktop.addEventListener('mouseout', () => {
+    timeoutId = setTimeout(() => {
+        cartDialogDesktop.classList.add('hidden'); // بعد از 200 میلی‌ثانیه دیالوگ رو ببند
+    }, 200);
+});
+
+// وقتی موس روی دیالوگ می‌ره
+cartDialogDesktop.addEventListener('mouseover', () => {
+    clearTimeout(timeoutId); // تاخیر بستن رو لغو کن، دیالوگ باز بمونه
+});
+
+// وقتی موس از روی دیالوگ خارج می‌شه
+cartDialogDesktop.addEventListener('mouseout', () => {
+    cartDialogDesktop.classList.add('hidden'); // دیالوگ رو ببند
+});
+
+// تابع به‌روزرسانی دیالوگ (همون که خودت نوشتی)
+function updateCartDialog(type) {
+    const cartItems = JSON.parse(sessionStorage.getItem('cart')) || [];
+    const cartItemsContainer = document.getElementById(`cartItems${type}`);
+    cartItemsContainer.innerHTML = '';
+
+    if (cartItems.length === 0) {
+        cartItemsContainer.innerHTML = '<p class="text-gray-500">سبد خرید خالی است</p>';
+        return;
+    }
+
+    cartItems.forEach(item => {
+        const itemElement = document.createElement('div');
+        itemElement.className = 'flex items-center gap-2 mb-2';
+        itemElement.innerHTML = `
+            <img src="${item.image}" class="w-10 h-10 object-cover rounded" alt="${item.name}">
+            <div>
+                <h4 class="text-sm font-bold">${item.name}</h4>
+                <p class="text-xs text-gray-500">${item.price} تومان</p>
+            </div>
+        `;
+        cartItemsContainer.appendChild(itemElement);
+    });
+}
+
+
+//  update dialog hover
+function updateCartDialog(type) {
+    const cartItems = JSON.parse(sessionStorage.getItem('cart')) || [];
+    const cartItemsContainer = document.getElementById(`cartItems${type}`);
+    cartItemsContainer.innerHTML = '';
+
+    if (cartItems.length === 0) {
+        cartItemsContainer.innerHTML = '<p class="text-gray-500">سبد خرید خالی است</p>';
+        return;
+    }
+
+    cartItems.forEach(item => {
+        const itemElement = document.createElement('div');
+        itemElement.className = 'flex items-center gap-2 mb-2';
+        itemElement.innerHTML = `
+            <img src="${item.image}" class="w-10 h-10 object-cover rounded" alt="${item.name}">
+            <div>
+                <h4 class="text-sm font-bold">${item.name}</h4>
+                <p class="text-xs text-gray-500">${item.price} تومان</p>
+            </div>
+        `;
+        cartItemsContainer.appendChild(itemElement);
+    });
+}
+

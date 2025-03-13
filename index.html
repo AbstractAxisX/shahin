@@ -18,7 +18,7 @@
     <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
     <!-- Basic navbar -->
     <div class="px-8 pt-4     <نو بار|navbar>  " dir="ltr">
-        <nav class="w-full h-12 bg-gray-900 mx-auto rounded-full md:flex flex-row-reverse px-2 py-2 gap-2 hidden">
+        <nav class=" desktop-navbar w-full h-12 bg-gray-900 mx-auto rounded-full md:flex flex-row-reverse px-2 py-2 gap-2 hidden">
             <a href="#" class="w-8"><img src="./pictures/favicon.ico" alt="" /></a>
             <button
                 class="bg-gray-200 px-2 rounded-full hover:bg-blue-500 hover:text-white active:ring-gray-100 active:ring-2">
@@ -57,8 +57,8 @@
                             id="menu-item-0">Account settings</a>
                         <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
                             id="menu-item-1">Support</a>
-                        <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
-                            id="menu-item-2">License</a>
+                        <a href="./products.html" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
+                            id="menu-item-2">products</a>
                     </div>
                 </div>
             </div>
@@ -66,7 +66,17 @@
            <!-- search box -->
             <div class="flex-1"></div>
 
-            <a href="#" class="rounded-full bg-gray-200 px-2 flex items-center  hover:bg-blue-500 hover:text-white active:ring-gray-100 active:ring-2"><i class="bi bi-handbag  " ></i></a> 
+            <a href="./cart.html" class="relative rounded-full bg-gray-200 px-2 flex items-center  hover:bg-blue-500 hover:text-white active:ring-gray-100 active:ring-2"><i class="bi bi-handbag  " ></i>
+                <span id="cartBadgeDesktop" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+            </a> 
+
+            <div id="cartDialogDesktop" class=" backdrop-blur-lg absolute left-16 top-16 mt-2 w-64  rounded-lg shadow-2xl p-4 hidden">
+                <h3 class="text-lg font-bold mb-2">سبد خرید</h3>
+                <div id="cartItemsDesktop" class="overflow-y-auto">
+                    <!-- آیتم‌های سبد خرید اینجا نمایش داده می‌شوند -->
+                </div>
+             </div>
+
             <form role="search" class="flex">
                 <button
                     class="bg-gray-200 mx-2 px-2 rounded-full hover:bg-blue-500 hover:text-white active:ring-gray-100 active:ring-2">

@@ -117,7 +117,42 @@ stars.forEach((star, index) => {
 // =======================
 // تابع افزودن به سبد خرید
 function addToCart(name, price, image) {
-    const cartItems = JSON.parse(sessionStorage.getItem('cart')) || [];
+    const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    const newItem = {
+        name: name,
+        price: Number(price), // قیمت به عدد تبدیل می‌شه
+        image: image
+    };
+    cartItems.push(newItem);
+    localStorage.setItem('cart', JSON.stringify(cartItems));
+    updateCartCounter();
+    alert('محصول به سبد خرید اضافه شد!');
+}
+
+// تابع نمایش تعداد آیتم های سبد خرید (اختیاری)
+function updateCartCounter() {
+    const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    document.getElementById('cartCounter').textContent = cartItems.length;
+}
+
+// فراخوانی هنگام لود صفحه
+document.addEventListener('DOMContentLoaded', () => {
+    updateCartCounter();
+});
+
+
+// badge of buy icon
+function updateCartCounter() {
+    const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    const count = cartItems.length;
+    document.getElementById('cartBadgeDesktop').textContent = count;
+    document.getElementById('cartBadgeMobile').textContent = count;
+}
+document.addEventListener('DOMContentLoaded', () => {
+    updateCartCounter();
+});
+function addToCart(name, price, image) {
+    const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
     
     const newItem = {
         name: name,
@@ -126,18 +161,144 @@ function addToCart(name, price, image) {
     };
 
     cartItems.push(newItem);
-    sessionStorage.setItem('cart', JSON.stringify(cartItems));
+    localStorage.setItem('cart', JSON.stringify(cartItems));
     
+    updateCartCounter(); // به‌روزرسانی بج
     alert('محصول به سبد خرید اضافه شد!');
 }
+// dialog hover
+// متغیرها رو تعریف می‌کنیم
+const cartIconDesktop = document.querySelector('.desktop-navbar .bi-handbag').parentElement;
+const cartDialogDesktop = document.getElementById('cartDialogDesktop');
+let timeoutId; // این برای تاخیر استفاده می‌شه
 
-// تابع نمایش تعداد آیتم های سبد خرید (اختیاری)
-function updateCartCounter() {
-    const cartItems = JSON.parse(sessionStorage.getItem('cart')) || [];
-    document.getElementById('cartCounter').textContent = cartItems.length;
+// وقتی موس روی آیکون می‌ره
+cartIconDesktop.addEventListener('mouseover', () => {
+    clearTimeout(timeoutId); // اگه تاخیری از قبل بود، لغوش کن
+    updateCartDialog('Desktop'); // دیالوگ رو به‌روزرسانی کن
+    cartDialogDesktop.classList.remove('hidden'); // دیالوگ رو نشون بده
+});
+
+// وقتی موس از روی آیکون خارج می‌شه
+cartIconDesktop.addEventListener('mouseout', () => {
+    timeoutId = setTimeout(() => {
+        cartDialogDesktop.classList.add('hidden'); // بعد از 200 میلی‌ثانیه دیالوگ رو ببند
+    }, 200);
+});
+
+// وقتی موس روی دیالوگ می‌ره
+cartDialogDesktop.addEventListener('mouseover', () => {
+    clearTimeout(timeoutId); // تاخیر بستن رو لغو کن، دیالوگ باز بمونه
+});
+
+// وقتی موس از روی دیالوگ خارج می‌شه
+cartDialogDesktop.addEventListener('mouseout', () => {
+    cartDialogDesktop.classList.add('hidden'); // دیالوگ رو ببند
+});
+
+// تابع به‌روزرسانی دیالوگ (همون که خودت نوشتی)
+function updateCartDialog(type) {
+    const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartItemsContainer = document.getElementById(`cartItems${type}`);
+    cartItemsContainer.innerHTML = '';
+
+    if (cartItems.length === 0) {
+        cartItemsContainer.innerHTML = '<p class="text-gray-500">سبد خرید خالی است</p>';
+        return;
+    }
+
+    cartItems.forEach(item => {
+        const itemElement = document.createElement('div');
+        itemElement.className = 'flex items-center gap-2 mb-2';
+        itemElement.innerHTML = `
+            <img src="${item.image}" class="w-10 h-10 object-cover rounded" alt="${item.name}">
+            <div>
+                <h4 class="text-sm font-bold">${item.name}</h4>
+                <p class="text-xs text-gray-500">${item.price} تومان</p>
+            </div>
+        `;
+        cartItemsContainer.appendChild(itemElement);
+    });
 }
 
-// فراخوانی هنگام لود صفحه
-document.addEventListener('DOMContentLoaded', () => {
-    updateCartCounter();
+
+//  update dialog hover
+function updateCartDialog(type) {
+    const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartItemsContainer = document.getElementById(`cartItems${type}`);
+    cartItemsContainer.innerHTML = '';
+
+    if (cartItems.length === 0) {
+        cartItemsContainer.innerHTML = '<p class="text-gray-500">سبد خرید خالی است</p>';
+        return;
+    }
+
+    cartItems.forEach(item => {
+        const itemElement = document.createElement('div');
+        itemElement.className = 'flex items-center gap-2 mb-2';
+        itemElement.innerHTML = `
+            <img src="${item.image}" class="w-10 h-10 object-cover rounded" alt="${item.name}">
+            <div>
+                <h4 class="text-sm font-bold">${item.name}</h4>
+                <p class="text-xs text-gray-500">${item.price} تومان</p>
+            </div>
+        `;
+        cartItemsContainer.appendChild(itemElement);
+    });
+}
+
+
+
+// متغیر برای ذخیره تعداد محصول در مودال
+let quantity = 1;
+const quantityDisplay = document.querySelector('.result');
+
+// تابع به‌روزرسانی نمایش تعداد
+function updateQuantityDisplay() {
+    quantityDisplay.innerHTML = quantity;
+}
+
+// ریست کردن مقدار به 1 وقتی مودال باز می‌شه
+function resetQuantity() {
+    quantity = 1;
+    updateQuantityDisplay();
+}
+
+// ویرایش تابع openModal برای ریست مقدار
+const originalOpenModal = openModal;
+openModal = function() {
+    originalOpenModal();
+    resetQuantity();
+};
+
+// مدیریت دکمه‌های افزایش و کاهش
+document.querySelector('.incN').addEventListener('click', () => {
+    if (quantity > 1) { // حداقل 1 باشه
+        quantity--;
+        updateQuantityDisplay();
+    }
 });
+
+document.querySelector('.addN').addEventListener('click', () => {
+    quantity++;
+    updateQuantityDisplay();
+});
+
+// تابع افزودن به سبد خرید با در نظر گرفتن تعداد
+function addToCart(name, price, image) {
+    const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    
+    // اضافه کردن محصول به تعداد انتخاب‌شده
+    for (let i = 0; i < quantity; i++) {
+        const newItem = {
+            name: name,
+            price: Number(price), // تبدیل به عدد
+            image: image
+        };
+        cartItems.push(newItem);
+    }
+    
+    localStorage.setItem('cart', JSON.stringify(cartItems));
+    updateCartCounter();
+    alert(`${quantity} عدد از محصول "${name}" به سبد خرید اضافه شد!`);
+}
